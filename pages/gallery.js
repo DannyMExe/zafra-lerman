@@ -37,9 +37,9 @@ const Gallery = () => {
     <Container>
         <h1>Student Project Videos</h1>
         <VideoContainer>
-            {youtubeIds.map(id => {
+            {youtubeIds.map((id, idx) => {
                 return (
-                    <Video>
+                    <Video key={idx}>
                         <Youtube videoId={id} height='390' width='640'/>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Sit amet luctus venenatis lectus. Lorem sed risus ultricies tristique nulla aliquet enim. Habitant morbi tristique senectus et netus et malesuada.</p>
                     </Video>
