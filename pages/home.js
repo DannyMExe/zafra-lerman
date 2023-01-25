@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import image from "../public/aboutPhoto.jpg";
 import styled from "styled-components";
+import VideoBar from "../src/components/VideoBar";
 
 const Container = styled.div`
     padding-top: 50px;
-    background-color: red;
     h1 {
         text-align: center;
     }
@@ -13,10 +13,14 @@ const Container = styled.div`
         float: left;
         max-width: 50vw;
         height: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+
     }
     p {
         text-align: justify;
         font-size: 25px;
+        padding-right: 15px;
     }
 `;
 
@@ -49,6 +53,7 @@ const Home = () => {
                 Nations NOVUS Award for the 16th Sustainable Development Goal:
                 Peace and Justice.
             </p>
+            <VideoBar />
         </Container>
     );
 };

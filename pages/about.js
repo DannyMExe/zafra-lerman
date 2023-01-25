@@ -10,9 +10,12 @@ const Container = styled.div`
     }
     img {
         float: left;
+        max-width: 50vw;
+        height: auto;
     }
     p {
         text-align: justify;
+        font-size: 25px;
     }
 `;
 
