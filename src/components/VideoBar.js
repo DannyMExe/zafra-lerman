@@ -4,11 +4,13 @@ import styled from 'styled-components'
 
 const VideoContainer = styled.div`
 display: flex;
-flex-wrap: wrap;
+/* flex-wrap: nowrap; */
+overflow-x: scroll;
 justify-content: space-around;
 iframe {
     padding: 10px;
 }
+width: 100%;
 `;
 
 const Video = styled.div`
