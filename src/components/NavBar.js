@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <Menu isOpen={isOpen} onOpen={handleIsOpen} onClose={handleIsOpen}>
-        <Link id="home" className="menu-item" href="/home" onClick={closeSideBar}>Home</Link>
+        <Link id="home" className="menu-item" href="/" onClick={closeSideBar}>Home</Link>
         <Link id="about" className="menu-item" href="/about" onClick={closeSideBar}>About</Link>
         <Link id="awards" className="menu-item" href="/awards" onClick={closeSideBar}>Awards & Publications</Link>
         <Link id="outreach" className="menu-item" href="/outreach" onClick={closeSideBar}>Outreach</Link>
