@@ -3,6 +3,7 @@ import Image from "next/image";
 import image from "../public/aboutPhoto.jpg";
 import styled from "styled-components";
 import VideoBar from "../src/components/VideoBar";
+import MaltaBar from "../src/components/MaltaBar";
 
 const Container = styled.div`
 
@@ -63,6 +64,7 @@ const Home = () => {
                 </p>
             </Bio>
             <VideoBar />
+            <MaltaBar />
         </Container>
     );
 };
