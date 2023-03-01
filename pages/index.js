@@ -9,7 +9,8 @@ const Container = styled.div`
 
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 30px;
+    gap: 30px;
     h1 {
         text-align: center;
     }
@@ -23,7 +24,11 @@ const Container = styled.div`
     }
     p {
         text-align: justify;
-        font-size: 25px;
+        /* font-size: 25px; */
+        font-size: 2.5vw;
+        @media (max-width: 750px) {
+            font-size: 20px;
+        }
         padding-right: 15px;
     }
 `;
