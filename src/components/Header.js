@@ -128,6 +128,7 @@ justify-content: space-between;
 a {
   color: white;
   text-decoration:none;
+  font-size: 24px;
 }
 
 `;
