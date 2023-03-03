@@ -63,10 +63,10 @@ const Home = () => {
                     Foundation, which aims to promote peace by bringing together
                     scientists from otherwise hostile countries to discuss science
                     and foster international scientific and technical collaboration.
-                    From 1986 to 2010, she chaired the American Chemical Society's
+                    <br/><br/>From 1986 to 2010, she chaired the American Chemical Society's
                     Subcommittee on Scientific Freedom and Human Rights. She has
                     been successful in preventing executions, releasing prisoners of
-                    conscience from jail and bringing dissidents to freedom. She is
+                    conscience from jail and bringing dissidents to freedom. <br/><br/>She is
                     the recipient of many awards for education and science
                     diplomacy, including the 1999 Presidential Award from U.S.
                     President Clinton, the 2005 Nyholm Prize for Education from the

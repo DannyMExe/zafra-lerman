@@ -7,7 +7,7 @@ const VideoContainer = styled.div`
     display: flex;
     overflow-x: scroll;
     overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
+    /* scroll-snap-type: inline mandatory; */ //SCROLL SNAP
     scroll-padding-inline: 5px;
 
     /* justify-content: space-around; */
