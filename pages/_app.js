@@ -13,7 +13,7 @@ const Container = styled.div`
 export default function App({ Component, pageProps }) {
   return (
     <Container>
-      <Header />
+      {/* <Header /> */}
       <Component {...pageProps} />
     </Container>
   )
