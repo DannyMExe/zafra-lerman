@@ -30,6 +30,7 @@ const Container = styled.div`
             font-size: 14px;
         }
         padding-right: 15px;
+        padding-left: 15px;
     }
 `;
 
