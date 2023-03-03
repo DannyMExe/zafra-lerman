@@ -21,13 +21,22 @@ const Container = styled.div`
         padding-right: 15px;
         padding-left: 15px;
 
+        @media (max-width: 750px) {
+            display: block;
+            float: none;
+            max-width: 80vw;
+            margin: auto;
+            padding-bottom: 14px;
+            
+        }
+
     }
     p {
         text-align: left;
         /* font-size: 25px; */
         font-size: 2.5vw;
         @media (max-width: 750px) {
-            font-size: 14px;
+            font-size: 16px;
         }
         padding-right: 15px;
         padding-left: 15px;

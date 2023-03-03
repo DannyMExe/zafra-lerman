@@ -117,7 +117,7 @@ const HeaderMain = styled.div`
 const LinksContainer = styled.div`
 @media (max-width: 750px) {
   /* display:none; */
-  visibility: hidden;
+  display: none;
 }
 
 display: flex;
@@ -138,6 +138,8 @@ const BurgerMenu = styled.div`
   display: none;
 }
 position: absolute;
+top: 36px;
+right: 36px;
 `;
 
 
