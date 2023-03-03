@@ -6,6 +6,8 @@ import Header from '../src/components/Header';
 
 const Container = styled.div`
   margin: 0;
+  width: 100%;
+  overflow-x: clip;
 `;
 
 export default function App({ Component, pageProps }) {
