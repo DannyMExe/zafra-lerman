@@ -23,11 +23,11 @@ const Container = styled.div`
 
     }
     p {
-        text-align: justify;
+        text-align: left;
         /* font-size: 25px; */
         font-size: 2.5vw;
         @media (max-width: 750px) {
-            font-size: 20px;
+            font-size: 14px;
         }
         padding-right: 15px;
     }
