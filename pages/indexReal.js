@@ -50,7 +50,7 @@ const Container = styled.div`
     @media (max-width: 750px) {
       font-size: 18px;
     }
-    padding-right: 15px;
+    padding: 15px;
     /* padding-left: 15px; */
   }
 `;
