@@ -11,13 +11,16 @@ const Container = styled.div`
   /* padding-top: 30px; */
   gap: 30px;
   h1 {
-    /* text-align: center; */
-    font-size: 45px;
-    padding-top: 30px;
-    @media (max-width: 750px) {
+      font-size: 45px;
+      padding-top: 30px;
+      @media (max-width: 750px) {
+        text-align: center;
       position: absolute;
-      top: 200px;
+      top: 420px;
       left: 0;
+      color: white;
+      font-size: 24px;
+      padding: 0 10px;
     }
     /* position: absolute; */
     /* color: white; */
@@ -45,7 +48,7 @@ const Container = styled.div`
     font-size: clamp(16px, 2vw, 35px);
     /* font-size: 2.5vw; */
     @media (max-width: 750px) {
-      font-size: 16px;
+      font-size: 18px;
     }
     padding-right: 15px;
     /* padding-left: 15px; */
@@ -70,7 +73,7 @@ const Home = () => {
         />
         <div>
           <h1>
-            Zafra Lerman is a scientist, educator, and humanitarian ecognized
+            Zafra Lerman is a scientist, educator, and humanitarian recognized
             for her contributions to science education and science diplomacy.
           </h1>
           <p>
