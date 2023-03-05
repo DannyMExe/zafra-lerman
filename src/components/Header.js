@@ -4,6 +4,8 @@ import Router from "next/router";
 import styled from "styled-components";
 import { links } from "./Nav/links";
 import NavBar from "./Nav/NavBar";
+import Logo from "../../public/LIASLogoNoText.png";
+import Image from "next/image";
 
 const headerMainHeight = "7em";
 const headerTopHeight = "2em";
@@ -142,6 +144,13 @@ top: 36px;
 right: 36px;
 `;
 
+const LogoContainer = styled.div`
+  position: absolute;
+  left: 50px;
+  justify-content: center;
+  align-items: center;
+  `;
+
 
 //COMPONENT STARTS HERE
 function Header() {
@@ -155,6 +164,9 @@ function Header() {
       <HeaderMain>
         <div>
           <div id="headerMainCenter">
+            <LogoContainer>
+              <Image src={Logo} height={80}/>
+            </LogoContainer>
             <Link href="/">
               <h1 id="siteTitle">Zafra Lerman</h1>
             </Link>
