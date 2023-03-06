@@ -10,6 +10,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+    background-image: url("/homePage/bgSkinny.jpeg");
 
     /* padding-top: 30px; */
     gap: 20vh;
@@ -121,7 +122,6 @@ const Parallax = styled(motion.div)`
     background-image: url("/homePage/bgSkinny.jpeg");
     background-size: cover;
     background-position: center;
-    top: 0;
     height: 300vh;
     width: 100vw;
     max-width: 100%;
@@ -134,7 +134,7 @@ const Home = () => {
 
     return (
         <Container>
-            <Parallax style={{ y }}></Parallax>
+            {/* <Parallax style={{ y }}></Parallax> */}
             <Bio>
                 <Image
                     src={image}
