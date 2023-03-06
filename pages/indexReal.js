@@ -4,12 +4,16 @@ import image from "../public/aboutPhoto.jpg";
 import styled from "styled-components";
 import VideoBar from "../src/components/VideoBar";
 import MaltaBar from "../src/components/MaltaBar";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
+
     /* padding-top: 30px; */
-    gap: 30px;
+    gap: 20vh;
+
     h1 {
         font-size: 45px;
         padding-top: 30px;
@@ -61,9 +65,75 @@ const Bio = styled.div`
     }
 `;
 
+const Education = styled.div`
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    height: 80vh;
+    width: 80vw;
+    justify-content: center;
+
+    background-image: url("/homePage/Dancers.jpg");
+    background-size: cover;
+    background-position: center;
+    p {
+        color: white;
+        text-align: center;
+    }
+`;
+
+const HumanRights = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 80vw;
+    justify-content: center;
+    align-self: flex-end;
+
+    background-image: url("/homePage/sakharov.png");
+    background-size: cover;
+    background-position: center;
+    p {
+        color: white;
+        text-align: center;
+    }
+`;
+
+const ScienceDiplomacy = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 30px;
+    height: 80vh;
+    width: 80vw;
+    background-image: url("/homePage/GroupPhotoMin.jpg");
+    background-size: cover;
+    background-position: center;
+    p {
+        color: white;
+        text-align: center;
+    }
+`;
+
+const Parallax = styled(motion.div)`
+    position: absolute;
+    background-image: url("/homePage/sunsetMin.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 300vh;
+    width: 100vw;
+    max-width: 100%;
+    z-index: -1;
+`;
+
 const Home = () => {
+    const { scrollYProgress } = useScroll();
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
     return (
         <Container>
+            <Parallax style={{ y }}></Parallax>
             <Bio>
                 <Image
                     src={image}
@@ -76,39 +146,20 @@ const Home = () => {
                         recognized for her contributions to science education
                         and science diplomacy.
                     </h1>
-                    <p>
-                        She holds a PhD in chemistry from the Weizmann Institute
-                        of Science and conducted research on isotope effects at
-                        Cornell and Northwestern Universities in the US, and the
-                        ETH, Zurich, Switzerland. She developed an innovative
-                        approach of teaching science at all levels using art,
-                        music, dance, drama, rap, and cultural backgrounds.
-                        These methods proved to be extremely successful among
-                        underprivileged students around the world and received
-                        international recognition.
-                        <br />
-                        <br />
-                        From 1986 to 2011, she chaired the American Chemical
-                        Society's Subcommittee on Scientific Freedom and Human
-                        Rights. She worked on human rights cases in the former
-                        Soviet Union, Russia, China, Guatemala, Cuba, Peru,
-                        South Africa, Iran, and many more. She met with
-                        dissidents in most of these countries.
-                        <br />
-                        <br />
-                        She is the recipient of many awards for education and
-                        science diplomacy, including the 1999 Presidential Award
-                        from U.S. President Clinton, the 2005 Nyholm Prize for
-                        Education from the Royal Society of Chemistry (England),
-                        the 2015 Science Diplomacy Award from the American
-                        Association for the Advancement of Science (AAAS), the
-                        2016 Andrei Sakharov Award for human rights from the
-                        American Physical Society (APS), and the 2016 United
-                        Nations NOVUS Award for the 16th Sustainable Development
-                        Goal: Peace and Justice.
-                    </p>
                 </div>
             </Bio>
+            <Education>
+                <p>
+                    Science education through art, music, dance, drama, rap and
+                    computer animation.
+                </p>
+            </Education>
+            <HumanRights>
+                <p>Fighting for Human Rights around the globe.</p>
+            </HumanRights>
+            <ScienceDiplomacy>
+                <p>Science Diplomacy as a bridge to peace in the Middle East</p>
+            </ScienceDiplomacy>
             {/* <VideoBar />
             <MaltaBar /> */}
         </Container>

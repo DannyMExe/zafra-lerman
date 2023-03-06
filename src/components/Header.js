@@ -107,7 +107,7 @@ const HeaderMain = styled.div`
             margin: 0.05em auto 0.15em;
             font-size: 2.1em;
             flex: 2 2 200%;
-            border-bottom: 1px solid white;
+            /* border-bottom: 1px solid white; */
         }
     }
 
@@ -144,11 +144,12 @@ const BurgerMenu = styled.div`
 `;
 
 const LogoContainer = styled.div`
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    /* position: absolute; */
+    top: 16px;
+    left: 25px;
     justify-content: center;
     align-items: center;
+    justify-self: left;
 `;
 
 //COMPONENT STARTS HERE
@@ -161,15 +162,16 @@ function Header() {
                 <div>
                     <div id="headerMainCenter">
                         <LogoContainer>
-                            <Image src={Logo} height={80} />
+                            <Image src={Logo} height={50} />
                         </LogoContainer>
-                        <Link href="/">
+                        <Link href="/" style={{ justifySelf: "center" }}>
                             <h1 id="siteTitle">Zafra Lerman</h1>
                         </Link>
+                        <div style={{ width: "38px" }}></div>
+                        <BurgerMenu>
+                            <NavBar />
+                        </BurgerMenu>
                     </div>
-                    <BurgerMenu>
-                        <NavBar />
-                    </BurgerMenu>
                     <LinksContainer>
                         {links.map((link, idx) => {
                             return (
