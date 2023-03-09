@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import image from "../public/aboutPhoto.jpg";
 import styled from "styled-components";
@@ -10,7 +10,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    background-image: url("/homePage/bgSkinny.jpeg");
+    /* background-image: url("/homePage/bgSkinny.jpeg"); */
 
     /* padding-top: 30px; */
     gap: 20vh;
@@ -61,6 +61,8 @@ const Container = styled.div`
 
 const Bio = styled.div`
     display: flex;
+    background-color: black;
+    color: white;
     @media (max-width: 750px) {
         flex-direction: column;
     }
@@ -70,14 +72,16 @@ const Education = styled.div`
     display: flex;
     flex-direction: column;
     /* gap: 30px; */
-    height: 80vh;
-    width: 80vw;
+    height: 60vh;
+    width: 100%;
     justify-content: center;
+    position: relative;
 
     background-image: url("/homePage/Dancers.jpg");
     background-size: cover;
     background-position: center;
     p {
+        position: absolute;
         color: white;
         text-align: center;
     }
@@ -86,15 +90,17 @@ const Education = styled.div`
 const HumanRights = styled.div`
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    width: 80vw;
+    height: 60vh;
+    width: 100%;
     justify-content: center;
     align-self: flex-end;
+    position: relative;
 
     background-image: url("/homePage/sakharov.png");
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     p {
+        position: absolute;
         color: white;
         text-align: center;
     }
@@ -106,11 +112,11 @@ const ScienceDiplomacy = styled.div`
     justify-content: center;
 
     gap: 30px;
-    height: 80vh;
-    width: 80vw;
+    height: 60vh;
+    width: 100%;
     background-image: url("/homePage/GroupPhotoMin.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     p {
         color: white;
         text-align: center;
@@ -128,9 +134,71 @@ const Parallax = styled(motion.div)`
     z-index: -1;
 `;
 
+const Background = styled.div`
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    height: 75vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    p {
+        position: absolute;
+        color: white;
+        text-align: center;
+        z-index: 5;
+    }
+`;
+
+const Overlay = styled.div`
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+`;
+
+function ParallaxSection({ bgImage, text }) {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["end start", "start end"],
+    });
+    const y = useTransform(scrollYProgress, [0, 1], ["-100%", "100%"]);
+
+    const test = "test";
+
+    return (
+        <Background
+            ref={ref}
+            style={{ backgroundImage: `url(/homePage/${bgImage})` }}
+        >
+            <Overlay>
+                <motion.p style={{ y }}>{text}</motion.p>
+            </Overlay>
+        </Background>
+    );
+}
+
 const Home = () => {
-    const { scrollYProgress } = useScroll();
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const sections = [
+        {
+            bg: "Dancers.jpg",
+            text: "Science education through art, music, dance, drama, rap and computer animation.",
+        },
+        {
+            bg: "sakharov.png",
+            text: "Fighting for Human Rights around the globe.",
+        },
+        {
+            bg: "GroupPhotoMin.jpg",
+            text: "Science Diplomacy as a bridge to peace in the Middle East.",
+        },
+    ];
 
     return (
         <Container>
@@ -149,18 +217,25 @@ const Home = () => {
                     </h1>
                 </div>
             </Bio>
-            <Education>
-                <p>
+            {sections.map((section, idx) => {
+                return (
+                    <ParallaxSection bgImage={section.bg} text={section.text} />
+                );
+            })}
+            {/* <Education>
+                <motion.p>
                     Science education through art, music, dance, drama, rap and
                     computer animation.
-                </p>
+                </motion.p>
             </Education>
             <HumanRights>
-                <p>Fighting for Human Rights around the globe.</p>
+                <motion.p>
+                    Fighting for Human Rights around the globe.
+                </motion.p>
             </HumanRights>
             <ScienceDiplomacy>
                 <p>Science Diplomacy as a bridge to peace in the Middle East</p>
-            </ScienceDiplomacy>
+            </ScienceDiplomacy> */}
             {/* <VideoBar />
             <MaltaBar /> */}
         </Container>
