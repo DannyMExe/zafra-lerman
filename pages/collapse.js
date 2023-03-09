@@ -7,6 +7,7 @@ import MaltaBar from "../src/components/MaltaBar";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { IoIosArrowDropdown } from "react-icons/io";
 import Link from "next/link";
+import Collapsible from "react-collapsible";
 
 const Container = styled.div`
     display: flex;
@@ -79,17 +80,32 @@ const Education = styled.div`
     display: flex;
     flex-direction: column;
     /* gap: 30px; */
-    height: 80vh;
+    height: 100%;
     width: 80vw;
     /* justify-content: center; */
 
-    background-image: url("/homePage/Dancers.jpg");
+    /* background-image: url("/homePage/Dancers.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     p {
         color: white;
         text-align: center;
     }
+
+    .Collapsible {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        font-size: 36px;
+    }
+`;
+
+const EducationImage = styled.div`
+    height: 80vh;
+    width: 80vw;
+    background-image: url("/homePage/Dancers.jpg");
+    background-size: cover;
+    background-position: center;
 `;
 
 const HumanRights = styled.div`
@@ -217,7 +233,27 @@ const Home = () => {
                 </HeaderContainer>
             </Bio>
             <Education>
-                <TitleDiv>
+                <Collapsible
+                    trigger={
+                        "Science education through art, music, dance, drama, rap and computer animation."
+                    }
+                >
+                    <p>
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. dolor sit
+                        amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </Collapsible>
+                <EducationImage></EducationImage>
+                {/* <TitleDiv>
                     <p>
                         Science education through art, music, dance, drama, rap
                         and computer animation.
@@ -226,11 +262,9 @@ const Home = () => {
                         <div
                             id="button"
                             onClick={(e) => toggleInfo(e)}
-                            // style={{ zIndex: "2" }}
-                        >
-                            {/* <IoIosArrowDropdown size={"35px"} color={"white"} /> */}{" "}
-                            {/* CHECK WHY DIV DOESNT KEEP HEIGHT WITHOUT CONTENT */}
-                        </div>
+                        > */}
+                {/* CHECK WHY DIV DOESNT KEEP HEIGHT WITHOUT CONTENT */}
+                {/* </div>
                         <p style={{ height: "0%" }}>
                             lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
@@ -247,7 +281,7 @@ const Home = () => {
                         </p>
                     </Description>
                     <Link href="/education">See More</Link>
-                </TitleDiv>
+                </TitleDiv> */}
             </Education>
             <HumanRights>
                 <TitleDiv>
