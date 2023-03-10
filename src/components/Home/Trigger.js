@@ -18,7 +18,7 @@ const Trigger = ({ isOpen, title, fontSize }) => {
                 setHover(false);
             }}
         >
-            <p>{title}</p>
+            <p className="triggerTitle">{title}</p>
             <IoIosArrowDropdown
                 style={{
                     fontSize: "1em",

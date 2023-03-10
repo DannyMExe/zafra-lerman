@@ -11,6 +11,10 @@ const Container = styled.div`
     height: 100%;
     width: 70vw;
 
+    @media (max-width: 750px) {
+        width: 100vw;
+    }
+
     p {
         color: white;
         text-align: center;
@@ -20,8 +24,12 @@ const Container = styled.div`
         color: white;
         text-align: center;
         font-size: 36px;
+
         p {
             text-align: center;
+            @media (max-width: 750px) {
+                font-size: 24px;
+            }
         }
         .linkContainer {
             width: 100%;
