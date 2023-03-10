@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import image from "../public/aboutPhoto.jpg";
+import React from "react";
 import styled from "styled-components";
-import VideoBar from "../src/components/VideoBar";
-import MaltaBar from "../src/components/MaltaBar";
-import { useScroll, motion, useTransform } from "framer-motion";
-import { IoIosArrowDropdown } from "react-icons/io";
-import Link from "next/link";
-import Collapsible from "react-collapsible";
-import Collapse from "../src/components/Home/Collapsible";
-import Trigger from "../src/components/Home/Trigger";
+import image from "../public/aboutPhoto.jpg";
 import EduImage from "../public/homePage/Dancers.jpg";
-import RightsImage from "../public/homePage/sakharov.jpg";
 import DiplomacyImage from "../public/homePage/GroupPhotoMin.jpg";
+import RightsImage from "../public/homePage/sakharov.jpg";
+import Collapse from "../src/components/Home/Collapsible";
 
 const Container = styled.div`
     display: flex;
