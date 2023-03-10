@@ -13,6 +13,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     /* padding-top: 30px; */
     gap: 20vh;
@@ -26,8 +27,9 @@ const Container = styled.div`
         @media (max-width: 750px) {
             text-align: center;
             position: absolute;
-            top: 420px;
-            left: 0;
+            /* top: 420px; */
+            bottom: 30px;
+            /* left: 50; */
             color: white;
             font-size: 24px;
             padding: 0 10px;
@@ -74,6 +76,8 @@ const HeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
 `;
 
 const Parallax = styled(motion.div)`
