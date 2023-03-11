@@ -23,7 +23,7 @@ const Container = styled.div`
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
         text-align: center;
-        font-size: 36px;
+        font-size: 36px !important;
 
         p {
             text-align: center;

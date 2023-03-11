@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoIosArrowDropdown } from "react-icons/io";
+import { FiPlusCircle } from "react-icons/fi";
 import styled from "styled-components";
 
 const Trigger = ({ isOpen, title, fontSize }) => {
@@ -19,7 +19,7 @@ const Trigger = ({ isOpen, title, fontSize }) => {
             }}
         >
             <p className="triggerTitle">{title}</p>
-            <IoIosArrowDropdown
+            <FiPlusCircle
                 style={{
                     fontSize: "1em",
                     color: hover ? "#3060a8" : "white",
@@ -27,7 +27,7 @@ const Trigger = ({ isOpen, title, fontSize }) => {
                     right: "10px",
                     top: "10px",
                     transition: "transform 450ms",
-                    transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    transform: isOpen ? "rotate(225deg)" : "rotate(0deg)",
                 }}
             />
         </div>
