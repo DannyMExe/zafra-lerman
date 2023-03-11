@@ -26,14 +26,14 @@ const Container = styled.div`
         font-size: 36px !important;
 
         p {
-            text-align: center;
+            text-align: left;
             @media (max-width: 750px) {
                 font-size: 24px;
             }
         }
         .linkContainer {
             width: 100%;
-            text-align: right;
+            text-align: center;
             padding-right: 15px;
             a {
                 color: white;
@@ -69,7 +69,7 @@ const Collapse = ({ title, image, info, link }) => {
                 <p>{info}</p>
                 <div className="linkContainer">
                     <Link href={link} style={{ cursor: "pointer" }}>
-                        Learn More
+                        More
                     </Link>
                 </div>
             </Collapsible>
