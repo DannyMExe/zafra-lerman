@@ -94,7 +94,7 @@ const Parallax = styled(motion.div)`
 
 const Home = () => {
     const { scrollYProgress } = useScroll();
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const y = useTransform(scrollYProgress, [0, 1], ["-5%", "50%"]);
     const collapsibleInfo = [
         {
             title: "Science education through art, music, dance, drama, rap and computer animation.",
