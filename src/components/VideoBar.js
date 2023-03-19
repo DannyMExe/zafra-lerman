@@ -15,6 +15,9 @@ const VideoContainer = styled.div`
 
     iframe {
         padding: 10px;
+	aspect-ratio: 16 / 9;
+	height: 100%;
+	width: 100%;
     }
     /* width: 100%; */
 `;
@@ -26,13 +29,13 @@ const Video = styled.div`
     scroll-snap-align: start;
 
     p {
-        width: 640px;
+        width: 45vw;
         text-align: center;
         margin: auto;
     }
 `;
 
-const VideoBar = () => {
+const VideoBar = ({videos}) => {
     const youtubeIds = [
         "6wLCKkr_yQk",
         "RGuMyXOhcLI",
@@ -46,13 +49,17 @@ const VideoBar = () => {
 
     const scrollRef = useHorizontalScroll();
 
+    const options = {
+        
+    }
+
     return (
         <div>
             <VideoContainer ref={scrollRef}>
                 {youtubeIds.map((id, idx) => {
                     return (
                         <Video key={idx}>
-                            <Youtube videoId={id} height="390" width="640" />
+                            <Youtube videoId={id} opts={options}/>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor

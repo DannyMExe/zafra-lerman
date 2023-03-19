@@ -103,19 +103,31 @@ const Home = () => {
         {
             title: "Science Education Through Art, Music, Dance, Drama, Rap and Computer Animation.",
             image: EduImage,
-            info: `Zafra developed an innovative approach of teaching science at all levels using art, music, dance, drama, rap, and cultural backgrounds. These methods proved to be extremely successful among underprivileged students around the world and received international recognition. In 2000, she adopted the school district of the town of Soweto, South Africa (the birthplace of Mandela and Bishop Tutu). In Chicago's low income neighborhoods, she worked with students, teachers and parents and made a tremendous change in their attitudes towards science. She worked with homeless students at night in a dance studio and taught them science through dance (while bringing food too). Many of these students graduated from college and two continued for a PhD in biochemistry. She worked with prisoners who succeeded in receiving bachelor’s and master’s degrees. Over 16,000 Chicago public school students and more than 1,000 teachers participated in her programs.`,
+            info: `Zafra developed an innovative approach of teaching science at all levels using art, music, dance, drama, rap, and cultural backgrounds. These methods proved to be extremely successful among underprivileged students around the world and received international recognition. In 2000, she adopted the school district of the town of Soweto, South Africa (the birthplace of Mandela and Bishop Tutu). In Chicago's low-income neighborhoods, she worked with students, teachers and parents and made a tremendous change in their attitudes towards science. She worked with homeless students at night in a dance studio and taught them science through dance (while bringing food too). Many of these students graduated from college and two continued for a PhD in biochemistry. She worked with prisoners who succeeded in receiving bachelor’s and master’s degrees. Over 16,000 Chicago public school students and more than 1,000 teachers participated in her programs.`,
             link: "/education",
         },
         {
             title: "Fighting for Human Rights Around the Globe.",
             image: RightsImage,
-            info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet debitis voluptatem assumenda aperiam magnam, est consectetur nemo mollitia dolorum nisi laudantium accusantium, dolore explicabo, nobis quod beatae laborum sunt in quis. Nulla, eligendi veniam! Quidem ipsam iusto reiciendis esse, minus, accusamus similique vitae maxime veniam unde eum laudantium necessitatibus nobis praesentium quas repudiandae perspiciatis? Neque ab molestias earum possimus a obcaecati similique accusantium doloribus facilis recusandae, deserunt harum fugiat. Qui beatae, impedit nisi iure maxime accusamus optio nesciunt? Placeat quibusdam reprehenderit maiores totam velit atque quia tempore perspiciatis sit natus libero mollitia, nulla enim, quis vitae fuga. Repellat, deleniti corrupti.",
+            info: `From 1986 to 2011, she chaired the American Chemical Society's Subcommittee on Scientific
+            Freedom and Human Rights. She worked on human rights cases in the former Soviet Union, Russia,
+            China, Guatemala, Cuba, Peru, South Africa, Iran, and many more. She met with dissidents in most of
+            these countries. After meeting Andrei Sakharov in 1989 and taking his advice, she took a crash course in
+            Russian to facilitate her work with dissidents in the former Soviet Union. At great risk to her safety, she
+            succeeded in preventing executions, releasing prisoners of conscience from jail, and bringing dissidents
+            to freedom. From 1987 until now, she serves as a Vice Chair for Chemistry on the Board of the
+            Committee of Concerned Scientists (CCS), where she continues to be very active in human rights cases.`,
             link: "/humanrights",
         },
         {
             title: "Science Diplomacy as a Bridge to Peace in the Middle East",
             image: DiplomacyImage,
-            info: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet debitis voluptatem assumenda aperiam magnam, est consectetur nemo mollitia dolorum nisi laudantium accusantium, dolore explicabo, nobis quod beatae laborum sunt in quis. Nulla, eligendi veniam! Quidem ipsam iusto reiciendis esse, minus, accusamus similique vitae maxime veniam unde eum laudantium necessitatibus nobis praesentium quas repudiandae perspiciatis? Neque ab molestias earum possimus a obcaecati similique accusantium doloribus facilis recusandae, deserunt harum fugiat. Qui beatae, impedit nisi iure maxime accusamus optio nesciunt? Placeat quibusdam reprehenderit maiores totam velit atque quia tempore perspiciatis sit natus libero mollitia, nulla enim, quis vitae fuga. Repellat, deleniti corrupti.",
+            info: `Since 2001, she has been using Science Diplomacy as a Bridge to Peace in the Middle East and is
+            the President of the Malta Conferences Foundation. The Malta Conferences are the only platform in the
+            world which brings together scientists from 15 Middle East countries (Bahrain, Egypt, Iraq, Iran, Israel,
+            Jordan, Kuwait, Lebanon, Oman, Palestine, Qatar, Saudi Arabia, Syria, Turkey, and the United Arab
+            Emirates) with Nobel Laureates to work for 5 days on solving regional problems, establishing cross-
+            border collaborations, and forging relationships that bridge chasms of distrust and intolerance.`,
             link: "/diplomacy",
         },
     ];
