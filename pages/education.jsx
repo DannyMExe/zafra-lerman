@@ -54,17 +54,6 @@ const SectionContainer = styled.div`
 `;
 
 const Education = () => {
-    const images = [
-        // { src: MaltaGroup, alt: "" },
-        { src: MaltaPrinceHassan, alt: "" },
-        { src: MaltaRoald, alt: "" },
-        { src: MaltaWorkshop, alt: "" },
-        // { src: MaltaGroup, alt: "" },
-        { src: MaltaPrinceHassan, alt: "" },
-        { src: MaltaRoald, alt: "" },
-        { src: MaltaWorkshop, alt: "" },
-    ];
-
     const videos = [
         { id: "", title: "Malta Group", desc: "" },
         { id: "", title: "Malta Group", desc: "" },
@@ -109,7 +98,6 @@ const Education = () => {
                 facilis. Saepe veniam consectetur asperiores, ipsum laboriosam
                 unde corporis laborum modi?
             </p>
-            {/* <PhotoGallery images={images} /> */}
             <VideoBar videos={videos} />
         </Container>
     );
