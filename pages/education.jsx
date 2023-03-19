@@ -7,7 +7,7 @@ import Image from "next/image";
 import MaltaGroup from "../public/pictures/MaltaGroup.jpeg";
 import MaltaPrinceHassan from "../public/pictures/MaltaPrinceHassanIrinaBokova.jpg";
 import MaltaRoald from "../public/pictures/MaltaRoald.jpg";
-// import MaltaWorkshop from "../public/pictures/MaltaWorkshop.JPG";
+import MaltaWorkshop from "../public/pictures/MaltaWorkshop.jpg";
 
 import Dancers from "../public/homePage/Dancers.jpg";
 
@@ -54,6 +54,17 @@ const SectionContainer = styled.div`
 `;
 
 const Education = () => {
+    const images = [
+        // { src: MaltaGroup, alt: "" },
+        { src: MaltaPrinceHassan, alt: "" },
+        { src: MaltaRoald, alt: "" },
+        { src: MaltaWorkshop, alt: "" },
+        // { src: MaltaGroup, alt: "" },
+        { src: MaltaPrinceHassan, alt: "" },
+        { src: MaltaRoald, alt: "" },
+        { src: MaltaWorkshop, alt: "" },
+    ];
+
     const videos = [
         { id: "", title: "Malta Group", desc: "" },
         { id: "", title: "Malta Group", desc: "" },
@@ -98,6 +109,7 @@ const Education = () => {
                 facilis. Saepe veniam consectetur asperiores, ipsum laboriosam
                 unde corporis laborum modi?
             </p>
+            {/* <PhotoGallery images={images} /> */}
             <VideoBar videos={videos} />
         </Container>
     );
