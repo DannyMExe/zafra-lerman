@@ -43,12 +43,14 @@ const Video = styled.div`
 
     h3 {
         text-align: center;
+        font-size: 1.8em;
     }
     p {
         width: 100%;
         text-align: center;
         margin: auto;
         margin-bottom: 20px;
+        font-size: 1.2em;
         @media (max-width: 750px) {
             height: 5vh;
             overflow: hidden;
@@ -56,6 +58,7 @@ const Video = styled.div`
         }
     }
     .showmore {
+        border-bottom: 1px solid black;
         @media (min-width: 750px) {
             display: none;
         }
@@ -86,21 +89,12 @@ const VideoBar = ({ videos }) => {
     return (
         <div>
             <VideoContainer>
-                {youtubeIds.map((id, idx) => {
+                {videos.map((video, idx) => {
                     return (
                         <Video key={idx}>
-                            <Youtube videoId={id} opts={options} />
-                            <h3>Video Title</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                                Aliquet porttitor lacus luctus accumsan tortor
-                                posuere ac ut. Sit amet luctus venenatis lectus.
-                                Lorem sed risus ultricies tristique nulla
-                                aliquet enim. Habitant morbi tristique senectus
-                                et netus et malesuada.
-                            </p>
+                            <Youtube videoId={video.id} opts={options} />
+                            <h3>{video.title}</h3>
+                            <p>{video.desc}</p>
                             {/* MAKE DIV DISPLAY NONE IN DESKTOP */}
                             <p
                                 className="showmore"

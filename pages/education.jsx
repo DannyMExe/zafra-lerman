@@ -28,9 +28,12 @@ const Container = styled.div`
     }
 
     img {
-        width: 100%;
+        width: 40vw;
         height: auto;
         align-self: center;
+        @media (max-width: 750px) {
+            width: 100%;
+        }
     }
 `;
 
@@ -70,10 +73,46 @@ const Education = () => {
     ];
 
     const videos = [
-        { id: "", title: "Malta Group", desc: "" },
-        { id: "", title: "Malta Group", desc: "" },
-        { id: "", title: "Malta Group", desc: "" },
-        { id: "", title: "Malta Group", desc: "" },
+        {
+            id: "6wLCKkr_yQk",
+            title: "The Bondfather",
+            desc: `1997 Student Project by Rebekah Lewis & Eddie Sircher`,
+        },
+        {
+            id: "RGuMyXOhcLI",
+            title: "Enter The Ozone",
+            desc: `Student Project by Marcus Jones`,
+        },
+        {
+            id: "SC7ZdAKyl24",
+            title: "Bondfellas",
+            desc: `Student Project by Skylar Wesby`,
+        },
+        {
+            id: "boMp0vz_uRk",
+            title: "Flatland",
+            desc: "Student Project by Todd Ripplinger",
+        },
+        {
+            id: "1dDfRW5v4bI",
+            title: "Little Boy",
+            desc: "Student Project by Todd Ripplinger",
+        },
+        {
+            id: "JQIvWPYkDZM",
+            title: "Stratosphere Wars : Chlorine Strikes Back",
+            desc: "1999 Student Project by Marcus Jones",
+        },
+        {
+            id: "NUmrQoYKx_4",
+            title: "Fossils",
+            desc: "Student Project by Jim Orlik",
+        },
+        {
+            id: "4SiPnGJcI4A",
+            title: "Malta Group",
+            desc: "1982 Student Project",
+        },
     ];
 
     return (
@@ -82,22 +121,23 @@ const Education = () => {
             <SectionContainer>
                 <Image src={Dancers} />
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quo, aliquam! Ducimus voluptates corporis doloremque
-                    exercitationem vitae est veniam libero, accusamus a et
-                    delectus unde sed quae sint. Harum illo rem perferendis
-                    deserunt assumenda ab magni animi rerum enim temporibus,
-                    nisi et architecto dolor modi nihil obcaecati sunt
-                    distinctio accusantium iure aspernatur officiis
-                    necessitatibus! Corrupti ea assumenda officia nobis
-                    dignissimos nisi dolor fuga iste inventore, esse, eos
-                    excepturi magnam possimus. Nulla facilis ad ducimus cumque
-                    totam omnis, ipsam vitae ratione harum aperiam
-                    exercitationem distinctio nisi et. Voluptatem, tenetur
-                    maiores. Quidem modi excepturi dolor impedit id ut
-                    explicabo, dolore error minus deleniti voluptatibus. Totam
-                    unde corrupti dolore consequuntur maxime quidem excepturi
-                    sit enim assumenda?
+                    Zafra developed an innovative approach of teaching science
+                    at all levels using art, music, dance, drama, animation,
+                    rap. These methods proved to be extremely successful with
+                    underprivileged students around the world and received
+                    international recognition. In 2000, she adopted the school
+                    district of the town of Soweto, South Africa (the birthplace
+                    of Mandela and Bishop Tutu). In Chicago&#39;s low-income
+                    neighborhoods, she worked with students, teachers and
+                    parents and made a tremendous change in their attitudes
+                    towards science. Zafra worked with homeless students at
+                    night in a dance studio and taught them science through
+                    dance. Many of these students graduated from college and two
+                    continued for a PhD in biochemistry. She worked with
+                    prisoners who succeeded in receiving bachelor&#39;s and
+                    master&#39;s degrees. Over 16,000 Chicago public school
+                    students and more than 1,000 teachers participated in her
+                    programs.
                 </p>
             </SectionContainer>
             <p>

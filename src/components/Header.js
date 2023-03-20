@@ -12,7 +12,7 @@ const headerTopHeight = "2em";
 
 const HeaderContainer = styled.div`
     color: white;
-    height: ${headerMainHeight + headerTopHeight};
+    height: 7em;
     h1,
     p {
         :hover {
@@ -56,6 +56,9 @@ const HeaderMain = styled.div`
         height: 100%;
         a {
             text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
             margin-top: 0.13em;
