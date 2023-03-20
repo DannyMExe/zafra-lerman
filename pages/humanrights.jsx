@@ -68,11 +68,7 @@ const HumanRights = () => {
         {
             id: "CKQpQAnJjgk",
             title: "Professor Zafra Lerman with Aleksandr Nikitin on C-SPAN",
-            desc: `Professor Zafra Lerman appears on C-SPAN to introduce Aleksandr Nikitin on a discussion on Radioactive Contamination in the Former Soviet Union.
-
-        Aleksandr Nikitin spoke about the problem of nuclear safety in Russia and potential threats from radiation from various sources. Among the topics he addressed were threats from spent submarine reactors, environmental threats posed by poorly maintained facilities, and government secrecy and inaction. He also commented on a recent accident in which a Russian submarine had become incapacitated in the Barents Sea. 
-        
-        Recorded August 24th, 2000`,
+            desc: ``,
         },
         {
             id: "PiM2V7TYpjg",
@@ -94,34 +90,36 @@ const HumanRights = () => {
                     Rights. She worked on human rights cases in the former
                     Soviet Union, Russia, China, Guatemala, Cuba, Peru, South
                     Africa, Iran, and many more. She met with dissidents in most
-                    of these countries. After meeting Andrei Sakharov in 1989
-                    and taking his advice, she took a crash course in Russian to
-                    facilitate her work with dissidents in the former Soviet
-                    Union. At great risk to her safety, she succeeded in
-                    preventing executions, releasing prisoners of conscience
-                    from jail, and bringing dissidents to freedom. From 1987
-                    until now, she serves as a Vice Chair for Chemistry on the
-                    Board of the Committee of Concerned Scientists (CCS), where
-                    she continues to be very active in human rights cases.
+                    of these countries. After meeting with Andrei Sakharov in
+                    1989 (The father of the Soviet hydrogen bomb, who became a
+                    champion for disarmament and human rights. He received the
+                    Nobel Peace Prize in 1975) and taking his advice, she took a
+                    crash course in Russian to facilitate her work with
+                    dissidents in the former Soviet Union. At great risk to her
+                    safety, she succeeded in preventing executions, releasing
+                    prisoners of conscience from jail, and bringing dissidents
+                    to freedom. From 1987 until now, she serves as a Vice Chair
+                    for Chemistry on the Board of the Committee of Concerned
+                    Scientists (CCS), where she continues to be very active in
+                    human rights cases.
                 </p>
             </SectionContainer>
             <SectionContainer>
                 <Image src={RightsImage2} />
                 <p>
-                    From 1986 to 2011, Zafra chaired the American Chemical
-                    Society's Subcommittee on Scientific Freedom and Human
-                    Rights. She worked on human rights cases in the former
-                    Soviet Union, Russia, China, Guatemala, Cuba, Peru, South
-                    Africa, Iran, and many more. She met with dissidents in most
-                    of these countries. After meeting Andrei Sakharov in 1989
-                    and taking his advice, she took a crash course in Russian to
-                    facilitate her work with dissidents in the former Soviet
-                    Union. At great risk to her safety, she succeeded in
-                    preventing executions, releasing prisoners of conscience
-                    from jail, and bringing dissidents to freedom. From 1987
-                    until now, she serves as a Vice Chair for Chemistry on the
-                    Board of the Committee of Concerned Scientists (CCS), where
-                    she continues to be very active in human rights cases.
+                    Professor Zafra Lerman appears on C-SPAN to introduce
+                    Aleksandr Nikitin, who was a Russian dissident that was
+                    arrested by the FSB after publishing an article about
+                    spilling nuclear waste from submarines into the sea, on a
+                    discussion on Radioactive Contamination in the Former Soviet
+                    Union. Aleksandr Nikitin spoke about the problem of nuclear
+                    safety in Russia and potential threats from radiation from
+                    various sources. Among the topics he addressed were threats
+                    from spent submarine reactors, environmental threats posed
+                    by poorly maintained facilities, and government secrecy and
+                    inaction. He also commented on a recent accident in which a
+                    Russian submarine had become incapacitated in the Barents
+                    Sea. Recorded August 24th, 2000
                 </p>
             </SectionContainer>
             <VideoBar videos={videos} />
