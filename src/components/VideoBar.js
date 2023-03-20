@@ -15,9 +15,9 @@ const VideoContainer = styled.div`
 
     iframe {
         padding: 10px;
-	aspect-ratio: 16 / 9;
-	height: 100%;
-	width: 100%;
+        aspect-ratio: 16 / 9;
+        height: 100%;
+        width: 100%;
     }
     /* width: 100%; */
 `;
@@ -28,14 +28,29 @@ const Video = styled.div`
 
     scroll-snap-align: start;
 
+    .expand {
+        height: auto;
+    }
+
     p {
         width: 45vw;
         text-align: center;
         margin: auto;
+        margin-bottom: 20px;
+        @media (max-width: 750px) {
+            height: 8vh;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .showmore {
+        @media (min-width: 750px) {
+            display: none;
+        }
     }
 `;
 
-const VideoBar = ({videos}) => {
+const VideoBar = ({ videos }) => {
     const youtubeIds = [
         "6wLCKkr_yQk",
         "RGuMyXOhcLI",
@@ -49,9 +64,12 @@ const VideoBar = ({videos}) => {
 
     const scrollRef = useHorizontalScroll();
 
-    const options = {
-        
-    }
+    const options = {};
+
+    const expand = (e) => {
+        e.target.previousElementSibling.classList.toggle("expand");
+        console.log(e.target.previousElementSibling);
+    };
 
     return (
         <div>
@@ -59,7 +77,7 @@ const VideoBar = ({videos}) => {
                 {youtubeIds.map((id, idx) => {
                     return (
                         <Video key={idx}>
-                            <Youtube videoId={id} opts={options}/>
+                            <Youtube videoId={id} opts={options} />
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
@@ -69,6 +87,15 @@ const VideoBar = ({videos}) => {
                                 Lorem sed risus ultricies tristique nulla
                                 aliquet enim. Habitant morbi tristique senectus
                                 et netus et malesuada.
+                            </p>
+                            {/* MAKE DIV DISPLAY NONE IN DESKTOP */}
+                            <p
+                                className="showmore"
+                                onClick={(e) => {
+                                    expand(e);
+                                }}
+                            >
+                                SHOW MORE
                             </p>
                         </Video>
                     );
