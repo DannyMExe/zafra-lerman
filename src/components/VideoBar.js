@@ -18,6 +18,9 @@ const VideoContainer = styled.div`
         aspect-ratio: 16 / 9;
         height: 100%;
         width: 100%;
+        @media (max-width: 750px) {
+            padding: 3px;
+        }
     }
     /* width: 100%; */
 `;
