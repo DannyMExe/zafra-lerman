@@ -110,7 +110,7 @@ const Education = () => {
         },
         {
             id: "4SiPnGJcI4A",
-            title: "Malta Group",
+            title: "Love Story : Sodium & Chlorine",
             desc: "1982 Student Project",
         },
     ];
