@@ -1,20 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import Youtube from "react-youtube";
 import styled from "styled-components";
-import { useHorizontalScroll } from "../funcs/useSideScroll";
+// import { useHorizontalScroll } from "../funcs/useSideScroll";
 
 const VideoContainer = styled.div`
     display: flex;
-    overflow-x: scroll;
+    flex-wrap: wrap;
+    /* overflow-x: scroll;
     overscroll-behavior-inline: contain;
-    /* scroll-snap-type: inline mandatory; */ //SCROLL SNAP
-    scroll-padding-inline: 5px;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 5px; */
 
     /* justify-content: space-around; */
     //CAUSES OFF SCREEN LEFT
 
     iframe {
-        padding: 10px;
+        padding: 5px;
         aspect-ratio: 16 / 9;
         height: 100%;
         width: 100%;
@@ -26,22 +27,30 @@ const VideoContainer = styled.div`
 `;
 
 const Video = styled.div`
+    width: 33%;
     align-items: center;
     justify-content: center;
 
     scroll-snap-align: start;
 
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+
     .expand {
         height: auto;
     }
 
+    h3 {
+        text-align: center;
+    }
     p {
-        width: 45vw;
+        width: 100%;
         text-align: center;
         margin: auto;
         margin-bottom: 20px;
         @media (max-width: 750px) {
-            height: 8vh;
+            height: 5vh;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -65,7 +74,7 @@ const VideoBar = ({ videos }) => {
         "4SiPnGJcI4A",
     ];
 
-    const scrollRef = useHorizontalScroll();
+    // const scrollRef = useHorizontalScroll();
 
     const options = {};
 
@@ -76,11 +85,12 @@ const VideoBar = ({ videos }) => {
 
     return (
         <div>
-            <VideoContainer ref={scrollRef}>
+            <VideoContainer>
                 {youtubeIds.map((id, idx) => {
                     return (
                         <Video key={idx}>
                             <Youtube videoId={id} opts={options} />
+                            <h3>Video Title</h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor

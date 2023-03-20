@@ -14,11 +14,12 @@ import Dancers from "../public/homePage/Dancers.jpg";
 const Container = styled.div`
     padding: 0 16px;
     @media (max-width: 750px) {
-        padding: 0;
+        /* padding: 0; */
     }
     h1 {
         text-align: center;
         font-size: 3rem;
+        padding: 10px 0;
     }
 
     p {
@@ -39,6 +40,9 @@ const SectionContainer = styled.div`
     p {
         font-size: clamp(16px, 2vw, 35px);
         flex: 0.6;
+        @media (min-width: 750px) {
+            padding-left: 5px;
+        }
     }
 
     img {
@@ -76,6 +80,7 @@ const Education = () => {
         <Container>
             <h1>Education</h1>
             <SectionContainer>
+                <Image src={Dancers} />
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quo, aliquam! Ducimus voluptates corporis doloremque
@@ -94,7 +99,6 @@ const Education = () => {
                     unde corrupti dolore consequuntur maxime quidem excepturi
                     sit enim assumenda?
                 </p>
-                <Image src={Dancers} />
             </SectionContainer>
             <p>
                 Iste autem accusantium voluptatum obcaecati, asperiores
