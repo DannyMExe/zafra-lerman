@@ -111,7 +111,7 @@ const ScienceDiplomacy = () => {
                     intolerance.
                 </p>
             </SectionContainer>
-            <SectionContainer>
+            {/* <SectionContainer>
                 <Image src={MaltaRoald} />
                 <p>
                     Since 2001, she has been using Science Diplomacy as a Bridge
@@ -126,7 +126,7 @@ const ScienceDiplomacy = () => {
                     forging relationships that bridge chasms of distrust and
                     intolerance.
                 </p>
-            </SectionContainer>
+            </SectionContainer> */}
             <Malta>
                 <h2>The Malta Conferences Foundation</h2>
                 <p>

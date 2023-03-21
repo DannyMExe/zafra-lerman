@@ -10,6 +10,7 @@ import MaltaRoald from "../public/pictures/MaltaRoald.jpg";
 import MaltaWorkshop from "../public/pictures/MaltaWorkshop.jpg";
 
 import Dancers from "../public/homePage/Dancers.jpg";
+import DancersClass from "../public/pictures/FigDancers.jpg";
 
 const Container = styled.div`
     padding: 0 16px;
@@ -147,14 +148,14 @@ const Education = () => {
                 <Image src={Dancers} />
                 <p>
                     Zafra developed an innovative approach of teaching science
-                    at all levels using art, music, dance, drama, animation,
+                    at all levels using art, music, dance, drama, animation, and
                     rap. These methods proved to be extremely successful with
                     underprivileged students around the world and received
                     international recognition. In 2000, she adopted the school
                     district of the town of Soweto, South Africa (the birthplace
                     of Mandela and Bishop Tutu). In Chicago&#39;s low-income
                     neighborhoods, she worked with students, teachers and
-                    parents and made a tremendous change in their attitudes
+                    parents and had a tremendous impact on their attitudes
                     towards science. Zafra worked with homeless students at
                     night in a dance studio and taught them science through
                     dance. Many of these students graduated from college and two
@@ -165,19 +166,10 @@ const Education = () => {
                     programs.
                 </p>
             </SectionContainer>
-            <p>
-                Iste autem accusantium voluptatum obcaecati, asperiores
-                necessitatibus nihil excepturi dolores quae facere incidunt,
-                facilis molestiae adipisci sint dolorem esse tempora veritatis.
-                Nesciunt modi accusamus, ipsam commodi veritatis libero ea,
-                itaque sit repellendus incidunt labore, iste quae cum illum
-                explicabo perferendis ad corporis tempore facere quaerat ab.
-                Sint magnam voluptatum, nisi nam enim magni dignissimos libero
-                et! Ad amet consequuntur ea quam unde, et natus laborum aut sunt
-                quo explicabo, obcaecati maxime incidunt reprehenderit rem ut
-                facilis. Saepe veniam consectetur asperiores, ipsum laboriosam
-                unde corporis laborum modi?
-            </p>
+            <SectionContainer>
+                <Image src={DancersClass} />
+                <div></div>
+            </SectionContainer>
             {/* <PhotoGallery images={images} /> */}
             <VideoBar videos={videos} />
         </Container>

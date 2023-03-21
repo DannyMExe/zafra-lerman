@@ -124,13 +124,15 @@ const Home = () => {
         {
             title: "Science Diplomacy as a Bridge to Peace in the Middle East",
             image: DiplomacyImage,
-            info: `Since 2001, she has been using Science Diplomacy as a Bridge to Peace in the Middle East and is
-            the President of the Malta Conferences Foundation. The Malta Conferences are the only platform in the
-            world which brings together scientists from 15 Middle East countries (Bahrain, Egypt, Iraq, Iran, Israel,
-            Jordan, Kuwait, Lebanon, Oman, Palestine, Qatar, Saudi Arabia, Syria, Turkey, and the United Arab
-            Emirates) with Nobel Laureates to work for 5 days on solving regional problems, establishing cross-
-            border collaborations, and forging relationships that bridge chasms of distrust and intolerance.`,
-            link: "/sciencediplomacy",
+            info: `Since 2001, Zafra has been using Science Diplomacy as a Bridge to Peace in the
+            Middle East and is the President of the Malta Conferences Foundation. The Malta
+            Conferences are the only platform in the world which brings together scientists from
+            15 Middle East countries (Bahrain, Egypt, Iraq, Iran, Israel, Jordan, Kuwait, Lebanon,
+            Oman, Palestine, Qatar, Saudi Arabia, Syria, Turkey, and the United Arab Emirates)
+            with Nobel Laureates to work for five days on solving regional problems, establishing
+            cross-border collaborations, and forging relationships that bridge chasms of distrust
+            and intolerance.`,
+            link: "https://www.maltaconferencesfoundation.org/",
         },
     ];
 
