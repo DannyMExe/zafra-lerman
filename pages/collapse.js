@@ -103,10 +103,14 @@ const Home = () => {
         {
             title: "Science Education Through Art, Music, Dance, Drama, Rap and Computer Animation.",
             image: EduImage,
-            info: `Zafra developed an innovative approach of teaching science at all levels using art, music, dance, drama, rap, and cultural backgrounds. 
-            These methods proved to be extremely successful among underprivileged students around the world and received international recognition. 
-            In Chicago's low-income neighborhoods, she worked with students, teachers and parents and made a tremendous change in their attitudes towards science. 
-            She worked with homeless students at night in a dance studio and taught them science through dance (while bringing food too).`,
+            info: `Zafra developed an innovative approach of teaching science at all levels using art, music, dance, drama, animation, and rap. 
+            These methods proved to be extremely successful with underprivileged students around the world and received international recognition. 
+            In 2000, she adopted the school district of the town of Soweto, South Africa (the birthplace of Mandela and Bishop Tutu). 
+            In Chicago's low-income neighborhoods, she worked with students, teachers and parents and had a tremendous impact on their attitudes towards science. 
+            Zafra worked with homeless students at night in a dance studio and taught them science through dance. 
+            Many of these students graduated from college and two continued for a PhD in biochemistry. 
+            She worked with prisoners who succeeded in receiving bachelor's and master's degrees. 
+            Over 16,000 Chicago public school students and more than 1,000 teachers participated in her programs.`,
             link: "/education",
         },
         {

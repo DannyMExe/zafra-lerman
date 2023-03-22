@@ -69,6 +69,10 @@ const SectionContainer = styled.div`
         width: 25vw;
         flex: 0.25;
     }
+    .yuriCont {
+        width: 40vw;
+        flex: 0.4;
+    }
 
     @media (max-width: 750px) {
         flex-direction: column;
@@ -136,7 +140,9 @@ const HumanRights = () => {
                 </p>
             </SectionContainer>
             <SectionContainer>
-                <Image className="yuri" src={yuri} />
+                <div className="yuriCont">
+                    <Image className="yuri" src={yuri} />
+                </div>
                 <div>
                     <h4>
                         YURI TARNOPOLSKY (Soviet Union) A dissident emphasizes
