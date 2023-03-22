@@ -4,9 +4,6 @@ import styled from "styled-components";
 import VideoBar from "../src/components/VideoBar";
 import Image from "next/image";
 
-import MaltaGroup from "../public/pictures/MaltaGroup.jpeg";
-import MaltaPrinceHassan from "../public/pictures/MaltaPrinceHassanIrinaBokova.jpg";
-import MaltaRoald from "../public/pictures/MaltaRoald.jpg";
 import MaltaWorkshop from "../public/pictures/MaltaWorkshop.jpg";
 import Link from "next/link";
 
