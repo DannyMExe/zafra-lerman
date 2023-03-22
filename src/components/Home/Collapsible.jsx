@@ -74,7 +74,13 @@ const Collapse = ({ title, image, info, link }) => {
                 </div>
             </Collapsible>
             {/* <CollapseImage></CollapseImage> */}
-            <Image src={image} priority width={540} height={360} />
+            <Image
+                src={image}
+                priority
+                width={540}
+                height={360}
+                unoptimized={true}
+            />
         </Container>
     );
 };

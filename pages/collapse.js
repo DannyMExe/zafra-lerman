@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import image from "../public/aboutPhoto.jpg";
 import EduImage from "../public/homePage/Dancers.jpg";
-import DiplomacyImage from "../public/homePage/GroupPhotoMin.jpg";
+import DiplomacyImage from "../public/homePage/GroupPhoto.png";
 import RightsImage from "../public/homePage/sakharov.jpg";
 import Collapse from "../src/components/Home/Collapsible";
 
