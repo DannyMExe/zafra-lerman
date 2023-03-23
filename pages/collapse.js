@@ -15,7 +15,7 @@ const Container = styled.div`
     justify-content: center;
     position: relative;
 
-    /* padding-top: 30px; */
+    padding-top: 45px;
     gap: 15vh;
 
     h1 {

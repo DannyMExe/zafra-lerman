@@ -12,7 +12,8 @@ import Dancers from "../public/homePage/Dancers.jpg";
 import DancersClass from "../public/pictures/FigDancers.jpg";
 
 const Container = styled.div`
-    padding: 0 16px;
+    /* padding: 0 16px; */
+    /* position: relative; */
     @media (max-width: 750px) {
         /* padding: 0; */
     }
@@ -58,6 +59,19 @@ const SectionContainer = styled.div`
     @media (max-width: 750px) {
         flex-direction: column;
     }
+`;
+
+const Background = styled.div`
+    position: absolute;
+    background-image: url("/homePage/bgSkinny.jpeg");
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    height: 400vh;
+    width: 100vw;
+    max-width: 100%;
+    z-index: -1;
 `;
 
 const Education = () => {
@@ -142,9 +156,10 @@ const Education = () => {
 
     return (
         <Container>
+            {/* <Background></Background> */}
             <h1>Education</h1>
             <SectionContainer>
-                <Image src={Dancers} />
+                <Image src={DancersClass} unoptimized={true} />
                 <p>
                     Zafra developed an innovative approach of teaching science
                     at all levels using art, music, dance, drama, animation, and
@@ -166,7 +181,7 @@ const Education = () => {
                 </p>
             </SectionContainer>
             <SectionContainer>
-                <Image src={DancersClass} unoptimized={true} />
+                {/* <Image src={DancersClass} unoptimized={true} /> */}
             </SectionContainer>
             {/* <PhotoGallery images={images} /> */}
             <VideoBar videos={videos} />

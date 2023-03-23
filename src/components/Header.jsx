@@ -7,12 +7,12 @@ import NavBar from "./Nav/NavBar";
 import Logo from "../../public/LIASLogoNoText.png";
 import Image from "next/image";
 
-const headerMainHeight = "7em";
+const headerMainHeight = "10em";
 const headerTopHeight = "2em";
 
 const HeaderContainer = styled.div`
     color: white;
-    height: 7em;
+    height: 10em;
     h1,
     p {
         :hover {
@@ -43,7 +43,10 @@ const HeaderMain = styled.div`
     /* margin-top: -1px; */
     width: 100%;
     height: ${headerMainHeight};
-    background-color: #3060a8;
+    background-color: rgba(255, 255, 255, 0);
+    @media (min-width: 750px) {
+        padding-top: 50px;
+    }
 
     /* @media screen and (min-width: 750px) {
     #siteTitle {
@@ -62,7 +65,7 @@ const HeaderMain = styled.div`
         }
         h1 {
             margin-top: 0.13em;
-            color: white;
+            color: black;
         }
         display: flex;
         flex-direction: column;
@@ -103,13 +106,18 @@ const HeaderMain = styled.div`
         width: 100%;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: center;
+        margin-bottom: 15px;
+        gap: 2rem;
 
         #siteTitle {
             width: fit-content;
-            margin: 0.05em auto 0.15em;
+            /* margin: 0.05em auto 0.15em; */
             font-size: 2.1em;
             flex: 2 2 200%;
+            @media (min-width: 750px) {
+                font-size: 2.8em;
+            }
             /* border-bottom: 1px solid white; */
         }
     }
@@ -131,9 +139,10 @@ const LinksContainer = styled.div`
     justify-content: space-between;
 
     a {
-        color: white;
+        color: black;
         text-decoration: none;
         font-size: 24px;
+        font-weight: bold;
     }
 `;
 
@@ -153,6 +162,12 @@ const LogoContainer = styled.div`
     justify-content: center;
     align-items: center;
     justify-self: left;
+    img {
+        @media (min-width: 750px) {
+            height: 100px;
+            width: auto;
+        }
+    }
 `;
 
 //COMPONENT STARTS HERE
