@@ -12,7 +12,8 @@ import Dancers from "../public/homePage/Dancers.jpg";
 import DancersClass from "../public/pictures/FigDancers.jpg";
 
 const Container = styled.div`
-    /* padding: 0 16px; */
+    padding-top: 45px;
+    padding: 0 10px;
     /* position: relative; */
     @media (max-width: 750px) {
         /* padding: 0; */
@@ -20,7 +21,7 @@ const Container = styled.div`
     h1 {
         text-align: center;
         font-size: 3rem;
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
     p {
@@ -40,7 +41,7 @@ const Container = styled.div`
 
 const SectionContainer = styled.div`
     display: flex;
-    /* padding-bottom: 20px; */
+    padding-bottom: 10px;
     p {
         font-size: clamp(16px, 2vw, 35px);
         flex: 0.6;
@@ -87,11 +88,6 @@ const Education = () => {
     ];
 
     const videos = [
-        {
-            id: "oThebAJpjbY",
-            title: "Classroom of the Future 2.0",
-            desc: `Student Project by Radek Michalik, Abdias Perez, & Mark Theriault`,
-        },
         {
             id: "tNwHYh5YbZo",
             title: "Period Table: The Elements Dance",
@@ -184,6 +180,15 @@ const Education = () => {
                 {/* <Image src={DancersClass} unoptimized={true} /> */}
             </SectionContainer>
             {/* <PhotoGallery images={images} /> */}
+            <VideoBar
+                videos={[
+                    {
+                        id: "oThebAJpjbY",
+                        title: "Classroom of the Future 2.0",
+                        desc: `Student Project by Radek Michalik, Abdias Perez, & Mark Theriault`,
+                    },
+                ]}
+            />
             <VideoBar videos={videos} />
         </Container>
     );

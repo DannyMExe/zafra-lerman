@@ -33,7 +33,7 @@ const Container = styled.div`
 
 const SectionContainer = styled.div`
     display: flex;
-    /* padding-bottom: 20px; */
+    padding-bottom: 10px;
     .quote {
         font-style: italic;
     }
@@ -61,8 +61,31 @@ const SectionContainer = styled.div`
         align-self: flex-start;
         flex: 0.4;
         @media (max-width: 750px) {
-            padding-bottom: 20px;
+            /* padding-bottom: 20px; */
             width: 100%;
+        }
+    }
+    .image {
+        position: relative;
+        width: 40vw;
+        height: auto;
+        align-self: flex-start;
+        flex: 0.4;
+        padding: 0;
+        @media (max-width: 750px) {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .imgTitle {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: white;
+            margin-bottom: 6px;
+            padding-bottom: 0;
         }
     }
     .yuri {
@@ -70,8 +93,24 @@ const SectionContainer = styled.div`
         flex: 0.25;
     }
     .yuriCont {
+        position: relative;
         width: 40vw;
         flex: 0.4;
+        display: flex;
+        justify-content: center;
+        .yuriTitle {
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 25vw;
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            color: white;
+            padding-bottom: 0;
+        }
+        @media (max-width: 750px) {
+            /* padding-bottom: 20px; */
+            width: 100%;
+        }
     }
 
     @media (max-width: 750px) {
@@ -99,7 +138,10 @@ const HumanRights = () => {
         <Container>
             <h1>Human Rights</h1>
             <SectionContainer>
-                <Image src={RightsImage} />
+                <div className="image">
+                    <Image src={RightsImage} />
+                    <p className="imgTitle">Andrei Sakharov</p>
+                </div>
                 <p>
                     From 1986 to 2011, Zafra chaired the American Chemical
                     Society&#39;s Subcommittee on Scientific Freedom and Human
@@ -118,7 +160,10 @@ const HumanRights = () => {
                 </p>
             </SectionContainer>
             <SectionContainer>
-                <Image src={RightsImage2} />
+                <div className="image">
+                    <Image src={RightsImage2} />
+                    <p className="imgTitle">Aleksandr Nikitin</p>
+                </div>
                 <p>
                     Professor Zafra Lerman appears on C-SPAN to introduce
                     Aleksandr Nikitin on a discussion on Radioactive
@@ -142,6 +187,7 @@ const HumanRights = () => {
             <SectionContainer>
                 <div className="yuriCont">
                     <Image className="yuri" src={yuri} />
+                    <p className="yuriTitle">Yuri Tarnopolsky</p>
                 </div>
                 <div>
                     <h4>

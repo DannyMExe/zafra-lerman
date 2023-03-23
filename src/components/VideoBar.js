@@ -6,6 +6,7 @@ import styled from "styled-components";
 const VideoContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     /* overflow-x: scroll;
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
@@ -96,14 +97,14 @@ const VideoBar = ({ videos }) => {
                             <h3>{video.title}</h3>
                             <p>{video.desc}</p>
                             {/* MAKE DIV DISPLAY NONE IN DESKTOP */}
-                            <p
+                            {/* <p
                                 className="showmore"
                                 onClick={(e) => {
                                     expand(e);
                                 }}
                             >
                                 SHOW MORE
-                            </p>
+                            </p> */}
                         </Video>
                     );
                 })}

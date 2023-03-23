@@ -12,7 +12,7 @@ const headerTopHeight = "2em";
 
 const HeaderContainer = styled.div`
     color: white;
-    height: 10em;
+    /* height: 10em; */
     h1,
     p {
         :hover {
@@ -42,7 +42,8 @@ const mobileLogoTextWidth = "3.62em";
 const HeaderMain = styled.div`
     /* margin-top: -1px; */
     width: 100%;
-    height: ${headerMainHeight};
+    padding-top: 25px;
+    /* height: ${headerMainHeight}; */
     background-color: rgba(255, 255, 255, 0);
     @media (min-width: 750px) {
         padding-top: 50px;
@@ -137,6 +138,7 @@ const LinksContainer = styled.div`
     width: 90%;
     max-width: 850px;
     justify-content: space-between;
+    text-align: center;
 
     a {
         color: black;
