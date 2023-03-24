@@ -45,6 +45,7 @@ const SectionContainer = styled.div`
     p {
         font-size: clamp(16px, 2vw, 35px);
         flex: 0.6;
+
         @media (min-width: 750px) {
             padding-left: 5px;
         }

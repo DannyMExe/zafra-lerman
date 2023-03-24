@@ -24,6 +24,9 @@ const VideoContainer = styled.div`
             padding: 3px;
         }
     }
+    .bg {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
     /* width: 100%; */
 `;
 
@@ -52,6 +55,7 @@ const Video = styled.div`
         margin: auto;
         margin-bottom: 20px;
         font-size: 1.2em;
+        padding-bottom: 0;
         @media (max-width: 750px) {
             height: 5vh;
             overflow: hidden;
@@ -66,7 +70,7 @@ const Video = styled.div`
     }
 `;
 
-const VideoBar = ({ videos }) => {
+const VideoBar = ({ videos, bg }) => {
     const youtubeIds = [
         "6wLCKkr_yQk",
         "RGuMyXOhcLI",
@@ -94,8 +98,8 @@ const VideoBar = ({ videos }) => {
                     return (
                         <Video key={idx}>
                             <Youtube videoId={video.id} opts={options} />
-                            <h3>{video.title}</h3>
-                            <p>{video.desc}</p>
+                            <h3 className="bg">{video.title}</h3>
+                            <p className="bg">{video.desc}</p>
                             {/* MAKE DIV DISPLAY NONE IN DESKTOP */}
                             {/* <p
                                 className="showmore"

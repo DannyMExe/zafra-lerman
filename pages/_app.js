@@ -4,6 +4,7 @@ import NavBar from "../src/components/Nav/NavBar";
 import styled from "styled-components";
 import Header from "../src/components/Header";
 import { useRouter } from "next/router";
+import Footer from "../src/components/Footer";
 
 const Container = styled.div`
     margin: 0;
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }) {
             {/* <Header /> */}
             {asPath !== "/" && <Header />}
             <Component {...pageProps} />
+            <Footer />
         </Container>
     );
 }

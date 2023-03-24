@@ -21,7 +21,7 @@ const Container = styled.div`
 
     p {
         font-size: clamp(16px, 2vw, 35px);
-        padding-bottom: 25px;
+        /* padding-bottom: 25px; */
     }
 
     img {
@@ -33,12 +33,15 @@ const Container = styled.div`
 
 const SectionContainer = styled.div`
     display: flex;
-    padding-bottom: 10px;
+    margin-bottom: 30px;
+    /* .bg { */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* } */
     .quote {
         font-style: italic;
     }
     p {
-        font-size: clamp(16px, 2vw, 35px);
+        font-size: clamp(16px, 2.1vw, 35px);
         flex: 0.6;
         @media (min-width: 750px) {
             padding-left: 5px;
@@ -98,6 +101,7 @@ const SectionContainer = styled.div`
         flex: 0.4;
         display: flex;
         justify-content: center;
+
         .yuriTitle {
             background-color: rgba(0, 0, 0, 0.4);
             width: 25vw;
@@ -115,6 +119,9 @@ const SectionContainer = styled.div`
 
     @media (max-width: 750px) {
         flex-direction: column;
+    }
+    h4 {
+        /* background-color: rgba(158, 161, 162, 0.8); */
     }
 `;
 
@@ -164,7 +171,7 @@ const HumanRights = () => {
                     <Image src={RightsImage2} />
                     <p className="imgTitle">Aleksandr Nikitin</p>
                 </div>
-                <p>
+                <p className="bg">
                     Professor Zafra Lerman appears on C-SPAN to introduce
                     Aleksandr Nikitin on a discussion on Radioactive
                     Contamination in the Former Soviet Union. Aleksandr Nikitin
@@ -196,7 +203,7 @@ const HumanRights = () => {
                         and the dissident in prison in a letter he wrote about
                         Zafra Lerman:
                     </h4>
-                    <p className="quote">
+                    <p className="quote bg">
                         … I often wondered what could make a person living in
                         freedom, safety, and comfort to fight for somebody
                         deprived all that and languishing somewhere on the other
@@ -211,7 +218,7 @@ const HumanRights = () => {
                     </p>
                 </div>
             </SectionContainer>
-            <VideoBar videos={videos} />
+            <VideoBar videos={videos} bg="bg" />
         </Container>
     );
 };

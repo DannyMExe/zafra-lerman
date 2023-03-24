@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "fortawesome": "^0.0.1-security",
     "framer-motion": "^10.1.0",
     "next": "13.1.1",
     "react": "18.2.0",
