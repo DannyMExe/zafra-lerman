@@ -63,18 +63,18 @@ const SectionContainer = styled.div`
     }
 `;
 
-const Background = styled.div`
-    position: absolute;
-    background-image: url("/homePage/bgSkinny.jpeg");
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    bottom: 0;
-    height: 400vh;
-    width: 100vw;
-    max-width: 100%;
-    z-index: -1;
-`;
+// const Background = styled.div`
+//     position: absolute;
+//     background-image: url("/homePage/bgBlue.jpeg");
+//     background-size: cover;
+//     background-position: center;
+//     top: 0;
+//     bottom: 0;
+//     height: 400vh;
+//     width: 100vw;
+//     max-width: 100%;
+//     z-index: -1;
+// `;
 
 const Education = () => {
     const images = [

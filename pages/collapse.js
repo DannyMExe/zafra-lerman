@@ -86,7 +86,7 @@ const HeaderContainer = styled.div`
 
 const Parallax = styled(motion.div)`
     position: absolute;
-    background-image: url("/homePage/bgSkinny.jpeg");
+    background-image: url("/homePage/bgBlue.jpg");
     background-size: cover;
     background-position: center;
     top: 0;
