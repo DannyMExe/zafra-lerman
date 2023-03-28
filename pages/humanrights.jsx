@@ -10,8 +10,8 @@ import yuri from "../public/pictures/yuri.png";
 
 const Container = styled.div`
     padding: 0 16px;
-    @media (max-width: 750px) {
-        /* padding: 0; */
+    @media (min-width: 750px) {
+        padding: 0 35px;
     }
     h1 {
         text-align: center;

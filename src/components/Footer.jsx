@@ -8,7 +8,7 @@ import {
 import styled from "styled-components";
 
 const Container = styled.div`
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
     padding: 20px;
 
     .social-icons {

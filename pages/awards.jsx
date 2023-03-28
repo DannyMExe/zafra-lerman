@@ -3,16 +3,28 @@ import styled from "styled-components";
 
 const Container = styled.div`
     padding-top: 55px;
+    text-align: center;
+    h3 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 `;
 
 const AwardsContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    text-align: center;
+    gap: 10px;
 `;
 
 const Award = styled.div`
     padding-bottom: 15px;
+    width: 30%;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    border: 1px solid rgba(255, 255, 255, 0.9);
 `;
 
 const Awards = () => {
@@ -130,14 +142,14 @@ const Awards = () => {
 
     return (
         <Container>
+            <h3>Awards</h3>
             <AwardsContainer>
-                <h3>Awards</h3>
                 {awards.map((award, index) => {
                     return (
                         <Award key={index}>
-                            <p>{award.honor}</p>
+                            <p className="honor">{award.honor}</p>
+                            <p className="year">{award.year}</p>
                             <p>{award.institution}</p>
-                            <p>{award.year}</p>
                         </Award>
                     );
                 })}
