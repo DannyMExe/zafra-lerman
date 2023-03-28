@@ -35,7 +35,7 @@ const SectionContainer = styled.div`
     display: flex;
     margin-bottom: 30px;
     /* .bg { */
-    background-color: rgba(255, 255, 255, 0.7);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     /* } */
     .quote {
         font-style: italic;
