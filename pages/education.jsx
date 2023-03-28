@@ -47,7 +47,7 @@ const SectionContainer = styled.div`
         flex: 0.6;
 
         @media (min-width: 750px) {
-            padding-left: 5px;
+            padding-left: 20px;
         }
     }
 

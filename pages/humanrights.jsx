@@ -39,12 +39,13 @@ const SectionContainer = styled.div`
     /* } */
     .quote {
         font-style: italic;
+        padding-left: 0;
     }
     p {
         font-size: clamp(16px, 2.1vw, 35px);
         flex: 0.6;
         @media (min-width: 750px) {
-            padding-left: 5px;
+            padding-left: 20px;
         }
         span {
             font-weight: bold;
