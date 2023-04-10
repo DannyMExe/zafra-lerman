@@ -23,8 +23,12 @@ const AwardsContainer = styled.div`
 const Award = styled.div`
     padding-bottom: 15px;
     width: 30%;
-    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.9);
+    .honor,
+    .year {
+        font-weight: bold;
+    }
 `;
 
 const Awards = () => {
@@ -147,16 +151,16 @@ const Awards = () => {
                 {awards.map((award, index) => {
                     return (
                         <Award key={index}>
-                            <p className="honor">{award.honor}</p>
+                            <p className="honor">{award.honor} </p>
                             <p className="year">{award.year}</p>
                             <p>{award.institution}</p>
                         </Award>
                     );
                 })}
             </AwardsContainer>
-            <div>
+            {/* <div>
                 <h3>Publications</h3>
-            </div>
+            </div> */}
         </Container>
     );
 };
