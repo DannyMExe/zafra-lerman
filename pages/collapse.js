@@ -90,7 +90,8 @@ const Parallax = styled(motion.div)`
     background-size: cover;
     background-position: center;
     top: 0;
-    height: 400vh;
+    /* height: 400vh; */
+    height: 100%;
     width: 100vw;
     max-width: 100%;
     z-index: -1;
@@ -142,7 +143,7 @@ const Home = () => {
 
     return (
         <Container>
-            <Parallax style={{ y }}></Parallax>
+            {/* <Parallax style={{ y }}></Parallax> */}
             <Bio>
                 <Image
                     id="bioImg"

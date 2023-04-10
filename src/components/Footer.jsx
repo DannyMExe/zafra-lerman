@@ -22,6 +22,7 @@ const Container = styled.div`
         flex-direction: column;
         align-items: center;
         color: #333;
+        color: inherit;
         font-size: 1.5em;
         margin: 0 10px;
         transition: color 0.2s ease-in-out;
@@ -61,9 +62,9 @@ const Container = styled.div`
     }
 `;
 
-function Footer() {
+function Footer({ home }) {
     return (
-        <Container>
+        <Container className={home && "footerBg"}>
             <div className="social-icons">
                 <a href="https://twitter.com/ZafraLerman">
                     <span>Twitter</span>
