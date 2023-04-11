@@ -8,49 +8,51 @@ import Footer from "../src/components/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Container = styled.div`
-    margin: 0;
-    width: 100%;
-    overflow-x: clip;
-    overflow-y: hidden;
-    position: relative;
-    .background {
-        /* background-color: purple; */
-    }
+  margin: 0;
+  width: 100%;
+  overflow-x: clip;
+  overflow-y: hidden;
+  position: relative;
+  .background {
+    /* background-color: purple; */
+  }
 `;
 
 const Parallax = styled(motion.div)`
-    position: absolute;
-    background-image: url("/homePage/bgBlue.jpg");
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    /* bottom: 0; */
-    /* height: 400vh; */
-    height: 100%;
-    width: 100vw;
-    max-width: 100%;
-    z-index: -1;
+  position: absolute;
+  background-image: url("/homePage/bgNew.jpg");
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  /* bottom: 0; */
+  /* height: 400vh; */
+  height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  z-index: -1;
 `;
 
 export default function App({ Component, pageProps }) {
-    const { asPath } = useRouter();
+  const { asPath } = useRouter();
 
-    const { scrollYProgress } = useScroll();
-    const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "30%"]);
 
-    return (
-        <Container
-            className={
-                asPath == "/" || asPath == "/collapse" ? "" : "background"
-            }
-        >
-            <Parallax style={{ y }}></Parallax>
-            {/* <Header /> */}
-            {asPath !== "/" && <Header />}
-            <Component {...pageProps} />
-            <Footer
-                home={asPath == "/" || asPath == "/collapse" ? true : false}
-            />
-        </Container>
-    );
+  return (
+    <Container
+      className={
+        asPath == "/" || asPath == "/collapse"
+          ? ""
+          : asPath == "/awards"
+          ? "awards"
+          : "background"
+      }
+    >
+      <Parallax style={{ y }}></Parallax>
+      {/* <Header /> */}
+      {asPath !== "/" && <Header />}
+      <Component {...pageProps} />
+      <Footer home={asPath == "/" || asPath == "/collapse" ? true : false} />
+    </Container>
+  );
 }

@@ -13,6 +13,11 @@
     background-size: cover;
     background-position: center;
 }
+.awards {
+  background-image: url("/homePage/bgNew.jpg");
+  background-size: cover;
+  background-position: center;
+}
 .footerBg {
-  color: white !important;
+  /* color: white !important; */
 }
