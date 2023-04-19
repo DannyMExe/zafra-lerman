@@ -5,6 +5,9 @@ import styled from "styled-components";
 
 const BioSection = styled.div`
     height: 100vh;
+    iframe {
+        width: 100vw !important;
+    }
 `;
 
 const Bio = () => {

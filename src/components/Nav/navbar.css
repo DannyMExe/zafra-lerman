@@ -61,6 +61,8 @@
   .bm-item {
     display: inline-block;
     color: whitesmoke;
+    font-size: larger;
+    padding-bottom: 15px;
   }
   
   /* Styling of overlay */

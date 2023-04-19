@@ -136,7 +136,7 @@ const HumanRights = () => {
         {
             id: "PiM2V7TYpjg",
             title: "Zafra Lerman Acceptance Speech for 2016 Sakharov Award",
-            desc: "Zafra Lerman Acceptance Speech for 2016 Sakharov Award",
+            desc: "",
         },
         // { id: "", title: "Malta Group", desc: "" },
         // { id: "", title: "Malta Group", desc: "" },
