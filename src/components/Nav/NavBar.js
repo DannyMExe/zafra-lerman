@@ -24,7 +24,6 @@ const NavBar = () => {
   return (
     <Menu right isOpen={isOpen} onOpen={handleIsOpen} onClose={handleIsOpen}>
       {links.map((link, idx) => {
-        console.log(link.icon);
         return (
           <Link
             key={idx}
