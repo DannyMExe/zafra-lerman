@@ -21,6 +21,9 @@ const Bio = () => {
         width={"100%"}
         height={"100%"}
       ></iframe>
+      <a href="/ZafraLermanBio.pdf" target="_blank" rel="noopener noreferrer">
+        <button>Download Bio</button>
+      </a>
     </BioSection>
   );
 };
