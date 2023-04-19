@@ -15,7 +15,12 @@ const BioSection = styled.div`
 const Bio = () => {
   return (
     <BioSection>
-      <iframe src="/ZafraLermanBio.pdf" width={"100%"} height={"100%"}></iframe>
+      <iframe
+        src="/ZafraLermanBio.pdf"
+        type="application/pdf"
+        width={"100%"}
+        height={"100%"}
+      ></iframe>
     </BioSection>
   );
 };
