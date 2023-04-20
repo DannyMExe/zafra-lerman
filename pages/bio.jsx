@@ -40,7 +40,10 @@ const Bio = () => {
       ></iframe>
       <iframe
         className="mobile-pdf"
-        src="https://drive.google.com/viewerng/viewer?embedded=true&url=www.zafralerman.com/ZafraLermanBio.pdf"
+        src={
+          "https://drive.google.com/viewerng/viewer?embedded=true&url=" +
+          encodeURIComponent("www.zafralerman.com/ZafraLermanBio.pdf")
+        }
         width="100%"
         height="90%"
         type="application/pdf"
