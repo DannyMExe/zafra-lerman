@@ -17,7 +17,7 @@ const BioSection = styled.div`
   .mobile-pdf {
     display: block;
   }
-  @media only screen and (min-width: 750px) {
+  /* @media only screen and (min-width: 750px) {
     .mobile-pdf {
       display: none;
     }
@@ -25,20 +25,20 @@ const BioSection = styled.div`
     .desktop-pdf {
       display: block;
     }
-  }
+  } */
 `;
 
 const Bio = () => {
   return (
     <BioSection>
-      <iframe
+      {/* <iframe
         className="desktop-pdf"
         src="/ZafraLermanBio.pdf"
         type="application/pdf"
         width={"100%"}
         height={"100%"}
-      ></iframe>
-      <iframe
+      ></iframe> */}
+      {/* <iframe
         className="mobile-pdf"
         src={
           "https://drive.google.com/viewerng/viewer?embedded=true&url=" +
@@ -53,7 +53,13 @@ const Bio = () => {
           Please click here to attempt to view the information in a separate
           browser window.
         </a>{" "}
-      </iframe>
+      </iframe> */}
+      <iframe
+        src="https://drive.google.com/file/d/1GWAKFG_mQ1RZqpJkAqZDD47SwZ-vtQlh/preview"
+        width="100vw"
+        height="100%"
+        allow="autoplay"
+      ></iframe>
       <a href="/ZafraLermanBio.pdf" target="_blank" rel="noopener noreferrer">
         <button>Download Bio</button>
       </a>
