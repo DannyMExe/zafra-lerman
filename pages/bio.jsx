@@ -3,21 +3,28 @@ import styled from "styled-components";
 // import PDF from "/ZafraLermanBio.pdf";
 
 const BioSection = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   iframe {
     width: 100vw !important;
+    height: 95vh;
   }
   img {
     width: 50vw !important;
   }
-  .desktop-pdf {
+  a {
+    text-align: center;
+  }
+  /* .desktop-pdf {
     display: none;
   }
 
   .mobile-pdf {
     display: block;
   }
-  /* @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 750px) {
     .mobile-pdf {
       display: none;
     }
