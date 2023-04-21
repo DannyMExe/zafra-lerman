@@ -49,8 +49,7 @@ export default function App({ Component, pageProps }) {
       }
     >
       <Parallax style={{ y }}></Parallax>
-      {/* <Header /> */}
-      {asPath !== "/" && <Header />}
+      <Header />
       <Component {...pageProps} />
       <Footer home={asPath == "/" || asPath == "/collapse" ? true : false} />
     </Container>

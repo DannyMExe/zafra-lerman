@@ -4,13 +4,7 @@ import { RiFilePaper2Fill } from "react-icons/ri";
 import { BsFillFileEarmarkPersonFill, BsGlobe2 } from "react-icons/bs";
 
 export const links = [
-  { id: "home", path: "/collapse", title: "HOME", icon: <FaHome /> },
-  {
-    id: "awards",
-    path: "/awards",
-    title: "AWARDS",
-    icon: <FaAward />,
-  },
+  { id: "home", path: "/", title: "HOME", icon: <FaHome /> },
   {
     id: "education",
     path: "/education",
@@ -24,6 +18,12 @@ export const links = [
     icon: <RiFilePaper2Fill />,
   },
   {
+    id: "awards",
+    path: "/awards",
+    title: "AWARDS",
+    icon: <FaAward />,
+  },
+  {
     id: "bio",
     path: "/bio",
     title: "BIO",
@@ -32,7 +32,7 @@ export const links = [
   {
     id: "malta",
     path: "https://www.maltaconferencesfoundation.org",
-    title: "MALTA",
+    title: "MCF",
     icon: <BsGlobe2 />,
   },
   // { id: "outreach", path: "/outreach", title: "Outreach" },
