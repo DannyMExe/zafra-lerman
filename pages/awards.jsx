@@ -41,10 +41,10 @@ const Award = styled.div`
 const Awards = () => {
   const awards = [
     {
-      honor: "Three Nobel Peace Prize Nominations",
+      honor: "Five Nobel Peace Prize Nominations",
       institution:
         "Nominators: member of the US Congress; member of the French parliament; Prof. of History",
-      year: 2020,
+      year: 2023,
     },
     {
       honor: "Distinguished Women in Chemistry or Chemical Engineering Award",

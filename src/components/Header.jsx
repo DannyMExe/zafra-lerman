@@ -20,41 +20,16 @@ const HeaderContainer = styled.div`
     }
   }
 `;
-// const HeaderTop = styled.div`
-//   height: ${headerTopHeight};
-//   background-color: black;
-
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: center;
-
-//   * {
-//     margin: auto 0;
-//   }
-//   p {
-//     margin-top: 0.27em;
-//     padding: 0 0.4em 0.15em;
-//   }
-// `;
 
 const mobileLogoTextWidth = "3.62em";
 
 const HeaderMain = styled.div`
-  /* margin-top: -1px; */
   width: 100%;
   padding-top: 25px;
-  /* height: ${headerMainHeight}; */
   background-color: rgba(255, 255, 255, 0);
   @media (min-width: 750px) {
     padding-top: 50px;
   }
-
-  /* @media screen and (min-width: 750px) {
-    #siteTitle {
-      text-align: center;
-    }
-
-  } */
 
   > div {
     height: 100%;
@@ -140,15 +115,22 @@ const LinksContainer = styled.div`
 
   display: flex;
   width: 90%;
-  max-width: 850px;
+  max-width: 900px;
   justify-content: space-between;
   text-align: center;
 
   a {
     color: black;
     text-decoration: none;
-    font-size: clamp(18px, 22px, 26px);
+    font-size: clamp(18px, 20px, 22px);
+    text-align: center;
     font-weight: bold;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

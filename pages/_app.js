@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
     <Container
       className={
         asPath == "/" || asPath == "/collapse"
-          ? ""
+          ? "footerBg"
           : asPath == "/awards"
           ? "awards"
           : "background"
