@@ -114,8 +114,8 @@ const LinksContainer = styled.div`
   }
 
   display: flex;
-  width: 90%;
-  max-width: 900px;
+  width: 80%;
+  /* max-width: 900px; */
   justify-content: space-between;
   text-align: center;
 
@@ -125,12 +125,18 @@ const LinksContainer = styled.div`
     font-size: clamp(18px, 20px, 22px);
     text-align: center;
     font-weight: bold;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     flex-basis: 0;
-    min-width: 100px;
+    /* min-width: 120px; */
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (width <= 1000px) {
+      font-size: 16px;
+    }
+    @media (width >= 1300px) {
+      font-size: 22px;
+    }
   }
 `;
 

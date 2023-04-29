@@ -13,6 +13,7 @@ const Container = styled.div`
   overflow-x: clip;
   overflow-y: hidden;
   position: relative;
+  min-height: 100vh;
   .background {
     /* background-color: purple; */
   }

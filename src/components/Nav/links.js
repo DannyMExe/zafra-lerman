@@ -2,6 +2,7 @@ import { FaAward, FaHome } from "react-icons/fa";
 import { HiAcademicCap } from "react-icons/hi";
 import { RiFilePaper2Fill } from "react-icons/ri";
 import { BsFillFileEarmarkPersonFill, BsGlobe2 } from "react-icons/bs";
+import { IoMdContact } from "react-icons/io";
 
 export const links = [
   { id: "home", path: "/", title: "HOME", icon: <FaHome /> },
@@ -34,6 +35,12 @@ export const links = [
     path: "/awards",
     title: "AWARDS",
     icon: <FaAward />,
+  },
+  {
+    id: "contact",
+    path: "/contact",
+    title: "CONTACT",
+    icon: <IoMdContact />,
   },
   // { id: "outreach", path: "/outreach", title: "Outreach" },
   // { id: "gallery", path: "/gallery", title: "Gallery" },
