@@ -15,6 +15,9 @@ const Container = styled.div`
     width: 60%;
     margin: auto;
     margin-bottom: 4%;
+    @media (max-width: 850px) {
+      width: 85%;
+    }
   }
 `;
 

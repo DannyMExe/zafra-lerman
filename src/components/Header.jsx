@@ -138,6 +138,10 @@ const LinksContainer = styled.div`
       font-size: 22px;
     }
   }
+  /* a:not(:last-child)::after {
+    content: "|";
+    margin: 0 10px;
+  } */
 `;
 
 const BurgerMenu = styled.div`
