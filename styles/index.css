@@ -24,3 +24,12 @@
   z-index: 1;
   margin-top: 10px;
 }
+
+.footerContact {
+  margin-top: auto;
+}
+
+.containerContact {
+  display: flex;
+  flex-direction: column;
+}

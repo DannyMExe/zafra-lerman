@@ -64,9 +64,11 @@ const Container = styled.div`
   }
 `;
 
-function Footer({ home }) {
+function Footer({ home, contact }) {
   return (
-    <Container className={home && "footerBg"}>
+    <Container
+      className={`${home ? "footerBg" : ""} ${contact ? "footerContact" : ""}`}
+    >
       <div className="social-icons">
         <Link
           href="https://twitter.com/ZafraLerman"

@@ -41,18 +41,21 @@ export default function App({ Component, pageProps }) {
 
   return (
     <Container
-      className={
-        asPath == "/" || asPath == "/collapse"
+      className={`${
+        asPath == "/"
           ? "footerBg"
           : asPath == "/awards"
           ? "awards"
           : "background"
-      }
+      } ${asPath == "/contact" ? "containerContact" : ""}`}
     >
       <Parallax style={{ y }}></Parallax>
       <Header />
       <Component {...pageProps} />
-      <Footer home={asPath == "/" || asPath == "/collapse" ? true : false} />
+      <Footer
+        home={asPath == "/" || asPath == "/awards" ? true : false}
+        contact={asPath == "/contact" ? true : false}
+      />
     </Container>
   );
 }
