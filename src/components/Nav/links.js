@@ -37,6 +37,12 @@ export const links = [
     icon: <FaAward />,
   },
   {
+    id: "publications",
+    path: "/publications",
+    title: "PUBLICATIONS",
+    icon: <FaAward />,
+  },
+  {
     id: "contact",
     path: "/contact",
     title: "CONTACT",
