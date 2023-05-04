@@ -191,7 +191,12 @@ function Header() {
           <LinksContainer>
             {links.map((link, idx) => {
               return (
-                <Link id={link.id} key={idx} href={link.path}>
+                <Link
+                  id={link.id}
+                  key={idx}
+                  href={link.path}
+                  target={link.id == "malta" ? "_blank" : ""}
+                >
                   {link.title}
                 </Link>
               );
