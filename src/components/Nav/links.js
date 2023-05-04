@@ -3,6 +3,7 @@ import { HiAcademicCap } from "react-icons/hi";
 import { RiFilePaper2Fill } from "react-icons/ri";
 import { BsFillFileEarmarkPersonFill, BsGlobe2 } from "react-icons/bs";
 import { IoMdContact } from "react-icons/io";
+import { BiNews } from "react-icons/bi";
 
 export const links = [
   { id: "home", path: "/", title: "HOME", icon: <FaHome /> },
@@ -40,7 +41,7 @@ export const links = [
     id: "publications",
     path: "/publications",
     title: "PUBLICATIONS",
-    icon: <FaAward />,
+    icon: <BiNews />,
   },
   {
     id: "contact",
