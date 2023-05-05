@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding-top: 55px;
+  padding-top: 5%;
   text-align: center;
   h3 {
     font-size: 40px;
