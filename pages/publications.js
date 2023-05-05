@@ -378,8 +378,8 @@ const Item = styled.div`
   @media (max-width: 750px) {
     width: 80%;
   }
-  /* background-color: rgba(255, 255, 255, 0.3); */
-  /* border: 1px solid rgba(255, 255, 255, 0.8); */
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   .honor,
   .year {
     font-weight: bold;
@@ -411,7 +411,7 @@ const Description = styled.p`
 const Author = styled.p`
   font-size: 1rem;
   line-height: 1.5;
-  color: #666;
+  /* color: #666; */
 `;
 const Pages = styled.p`
   font-size: 1rem;
@@ -422,7 +422,7 @@ const Pages = styled.p`
 const Publications = () => {
   return (
     <Container>
-      <h3>Publications</h3>
+      <h3>Selected Publications</h3>
       <List>
         {publications.map((publication) =>
           publication.url ? (
