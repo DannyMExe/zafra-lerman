@@ -7,6 +7,7 @@ import EduImage from "../public/homePage/DancersNew.jpg";
 import DiplomacyImage from "../public/homePage/GroupPhoto.png";
 import RightsImage from "../public/homePage/sakharov.jpg";
 import Collapse from "../src/components/Home/Collapsible";
+import Head from "next/head";
 
 const Container = styled.div`
   display: flex;
@@ -151,6 +152,14 @@ const Home = () => {
   return (
     <Container>
       {/* <Parallax style={{ y }}></Parallax> */}
+      <Head>
+        <title>Zafra Lerman</title>
+        <meta
+          name="keywords"
+          content="Zafra Lerman, Zafra, Lerman, Website, Webpage, Science Diplomacy"
+        />
+        <meta name="description" content="The Home Page of Zafra Lerman" />
+      </Head>
       <Bio>
         <Image
           id="bioImg"

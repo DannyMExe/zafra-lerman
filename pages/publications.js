@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Head from "next/head";
 
 const publications = [
   {
@@ -16,7 +17,7 @@ const publications = [
     title: "Keep Up the Fight for Scientists’ Human Rights",
     author: "Lerman, Z",
     publisher: "Nature Reviews Materials",
-    pages: "2022",
+    pages: "2022, 7, pp. 497–498",
     url: "https://www.nature.com/articles/s41578-022-00456-7",
   },
 
@@ -25,7 +26,7 @@ const publications = [
     title: "Science Education is a Human Right that Belongs to All",
     author: "Lerman, Z",
     publisher: "Iraqi Academy Journal",
-    pages: "Vol 1 Issue 0 No 10, 2021, pp. 97-102",
+    pages: "2021, 1 (10), pp. 97-102",
     url: "",
   },
   {
@@ -33,7 +34,7 @@ const publications = [
     title: "Malta X Anniversary and COVID-19",
     author: "Zajdela, E.R. and Lerman, Z.M.",
     publisher: "Chemistry International",
-    pages: "vol. 43, no. 2, 2021 pp. 16-19",
+    pages: "2021, 43 (2), pp. 16-19",
     url: "https://doi.org/10.1515/ci-2021-0204",
   },
   {
@@ -50,15 +51,15 @@ const publications = [
       "Education, Human Rights, and Peace – Contributions to the Progress of Humanity",
     author: "Lerman, Z",
     publisher: "Pure and Applied Chemistry",
-    pages: "91(2), 2018, pp. 351-360",
-    url: "",
+    pages: "2018, 91 (2), pp. 351-360",
+    url: "https://www.degruyter.com/view/j/pac.2019.91.issue-2/pac-2018-0712/pac-2018-0712.xml",
   },
   {
     id: "7",
     title: "Resolution on the Water Crisis in Gaza",
     author: "Lerman, Z.M.",
     publisher: "Chemistry International",
-    pages: "2018 (40), 2, 32",
+    pages: "2018 40, (2), pp. 32",
     url: "",
   },
   {
@@ -141,16 +142,16 @@ const publications = [
     title: "The Challenges for Chemistry Education in Africa",
     author: "Lerman, Z. M.",
     publisher: "African Journal of Chemical Education (AJCE)",
-    pages: "4 (2), pp 80-90. 2014",
-    url: "",
+    pages: "2014, 4 (2), pp 80-90",
+    url: "https://www.ajol.info/index.php/ajce/article/view/104075",
   },
   {
     id: "17",
     title: "Research and Education in the Middle East",
     author: "Lerman, Z. M., Hoffman, M. Z. and Black, I.",
     publisher: "Chemistry International",
-    pages: "(36) 3. pp 6, 27-29. 2014",
-    url: "",
+    pages: "2014, 36 (3), pp 6, 27-29",
+    url: "https://www.degruyter.com/document/doi/10.1515/ci.2014.36.3.27/html?lang=en",
   },
   {
     id: "18",
@@ -158,15 +159,15 @@ const publications = [
       "The Malta Conferences, Frontiers of Science: Research and Education in the Middle East",
     author: "Lerman, Z. M. and Hoffman, M. Z.",
     publisher: "Forum on International Physics. American Physical Society",
-    pages: "pp 19- 21. 2014",
-    url: "",
+    pages: "2014, pp. 19-21",
+    url: "https://www.degruyter.com/document/doi/10.1515/ci.2009.31.2.21/html",
   },
   {
     id: "19",
     title: "Human Rights, Education and Peace: A Personal Odyssey",
     author: "Lerman, Z. M.",
     publisher: "J. Chem. Educ.",
-    pages: "90 (1), pp 5-9. 2013",
+    pages: "2013, 90 (1), pp. 5-9",
     url: "",
   },
   {
@@ -175,7 +176,7 @@ const publications = [
     author: "Lerman, Z. M.",
     publisher:
       "Stimulating Reflection and Catalysing Change in Chemistry Education",
-    pages: "pp 196-201. (Rome, Italy. 2012)",
+    pages: "2012, Rome, Italy, pp 196-201",
     url: "",
   },
   {
@@ -184,7 +185,7 @@ const publications = [
     author: "Lerman, Z. M.",
     publisher: "15th ISCB International Conference",
     pages:
-      "ICCM 2011. Published in a book on: “Chemistry for Mankind: Innovative Ideas in the Life Sciences” (Nagpur, India: 2011)",
+      "2011, Nagpur, India, ICCM 2011. “Chemistry for Mankind: Innovative Ideas in the Life Sciences”",
     url: "",
   },
   {
@@ -193,8 +194,8 @@ const publications = [
     author: "Lerman, Z. M.",
     publisher:
       "Chemistry Education in the ICT Age, Gupta-Bhowon, M.; Jhaumeer-Laulloo, S.; Li Kam Wah, H.; Ramasami, P. (Eds.)",
-    pages: "(Springer: 2009)",
-    url: "",
+    pages: "2009, Springer",
+    url: "https://www.researchgate.net/publication/226317033_Chemistry_and_Chemical_Education_as_a_Bridge_to_Peace",
   },
   {
     id: "23",
@@ -203,8 +204,8 @@ const publications = [
     author: "Lerman, Z. M. and Morton, D.",
     publisher:
       "Chemistry Education in the ICT Age, Gupta-Bhowon, M.; Jhaumeer-Laulloo, S.; Li Kam Wah, H.; Ramasami, P. (Eds.)",
-    pages: "(Springer: 2009)",
-    url: "",
+    pages: "2009, Springer",
+    url: "https://www.researchgate.net/publication/225263454_Using_the_Arts_and_Computer_Animation_to_Make_Chemistry_Accessible_to_All_in_the_Twenty-First_Century",
   },
   {
     id: "24",
@@ -212,7 +213,7 @@ const publications = [
     author: "Lerman, Z. M.",
     publisher:
       "Excellence in Education 2008: Future Minds and Creativity, T. Subhi-Yamin, editor",
-    pages: "(National Library, Jordan: 2009)",
+    pages: "2009 (National Library, Jordan)",
     url: "",
   },
   {
@@ -221,7 +222,7 @@ const publications = [
     author: "Lerman, Z.",
     publisher: "ACS International E-Newsletter",
     pages:
-      "January/February 2008 issue (American Chemical Society Office of International Activities, Washington, DC: 2008)",
+      "2008, January/February issue (American Chemical Society Office of International Activities, Washington, DC)",
     url: "",
   },
   {
@@ -230,7 +231,7 @@ const publications = [
     author: "Lerman, Z. M.",
     publisher: "Studies in Philosophy, Culture & Education",
     pages:
-      "pp. 149-165 (Institute for Multicultural Research, Arab Academic College for Education, Israel: 2007)",
+      "2007 (Institute for Multicultural Research, Arab Academic College for Education, Israel) pp. 149-165",
     url: "",
   },
   {
@@ -239,7 +240,7 @@ const publications = [
       "Frontiers of Chemical Sciences II: Research and Education in the Middle East",
     author: "Lerman, Z. M. and Wade, J.",
     publisher: "Chemistry in Israel - Bulletin of the Israel Chemical Society",
-    pages: "(21), pp. 21-23 (Israel: 2006)",
+    pages: "2006, (Israel), (21), pp. 21-23",
     url: "",
   },
   {
@@ -248,7 +249,7 @@ const publications = [
     author: "Lerman, Z. M.",
     publisher:
       "Reflections from the Frontiers; Explorations for the Future; Gordon Research Conferences 1931-2006",
-    pages: "p. 109 (Chemical Heritage Foundation, Philadelphia: 2006)",
+    pages: "2006 (Chemical Heritage Foundation, Philadelphia) pp. 109",
     url: "",
   },
   {
@@ -256,16 +257,16 @@ const publications = [
     title: "Chemistry: An Inspiration for Theatre and Dance",
     author: "Lerman, Z. M.",
     publisher: "Chemical Education International",
-    pages: "6, 1, 2005",
-    url: "",
+    pages: "2005, 6, (1)",
+    url: "https://old.iupac.org/publications/cei/vol6/11_Lerman.pdf",
   },
   {
     id: "30",
     title: "Using the Arts to Make Chemistry Accessible to Everybody",
     author: "Lerman, Z. M.",
     publisher: "J. Chem. Ed.",
-    pages: "80 (11), 1234-1243, 2003",
-    url: "",
+    pages: "2003, 80 (11), pp. 1234-1243",
+    url: "https://www.researchgate.net/publication/231266092_Using_the_Arts_To_Make_Chemistry_Accessible_to_Everybody_2002_James_Flack_Norris_Award_sponsored_by_ACS_Northeast_Section",
   },
   {
     id: "31",
@@ -273,7 +274,7 @@ const publications = [
       "Citizen Chemists (book review of Claude, R. P.: Science in the Service of Human Rights)",
     author: "Lerman, Z.",
     publisher: "Chemical and Engineering News",
-    pages: "87 (21), 42-43, 2003",
+    pages: "2003, 87 (21), pp. 42-43",
     url: "",
   },
   {
@@ -281,7 +282,7 @@ const publications = [
     title: "From the Outreach Front! IAC Conference in Cuba",
     author: "Lerman, Z.",
     publisher: "J. Chem. Ed.",
-    pages: "80 (4), 383, 2003",
+    pages: "2003, 80 (4), pp. 383",
     url: "",
   },
   {
@@ -289,8 +290,8 @@ const publications = [
     title: "ACS Delegation Travels to Cuba",
     author: "Hoffman, M., and Lerman, Z.",
     publisher: "The Chemical Bulletin",
-    pages: "90, 4, 8, American Chemical Society, 2003",
-    url: "",
+    pages: "2003, 90, (4), 8, American Chemical Society",
+    url: "https://cen.acs.org/articles/82/i51/ACS-AIChE-Group-Travels-Cuba.html",
   },
   {
     id: "34",
@@ -299,7 +300,7 @@ const publications = [
     author: "Lerman, Z. M.",
     publisher:
       "Commonwealth Association for Science, Technology and Mathematics Education (CASTME) conference on Linking Science, Mathematics and Technology Education, and their Social Relevance",
-    pages: "(Malta: 2002)",
+    pages: "2002, (Malta)",
     url: "",
   },
   {
@@ -307,7 +308,7 @@ const publications = [
     title: "Alternative Methods to Teach and Assess Science",
     author: "Lerman, Z. M.",
     publisher: "Chemistry in Israel - Bulletin of the Israel Chemical Society",
-    pages: "(8), 4-7 (Israel: 2001)",
+    pages: "2001, (Israel), (8), pp. 4-7",
     url: "http://www.weizmann.ac.il/ICS/booklet/8/pdf/alternative.pdf",
   },
   {
@@ -316,7 +317,7 @@ const publications = [
       "Innovative Methods to Guarantee Science and Technology Education for All",
     author: "Lerman, Z. M., Neul, G. A., Kostecka, K., and Caplan, M.",
     publisher: "Science and Technology Education: Preparing Future Citizens",
-    pages: "I, 13-21 (Paralimni, Cyprus: 2001)",
+    pages: "2001, (Paralimni, Cyprus), I, pp. 13-21",
     url: "",
   },
   {
@@ -324,7 +325,7 @@ const publications = [
     title: "Visualizing the Chemical Bond",
     author: "Lerman, Z. M.",
     publisher: "Chemical Education International",
-    pages: "2001 (2), 1, 6-13",
+    pages: "2001 2, (1), pp. 6-13",
     url: "",
   },
   {
@@ -332,7 +333,7 @@ const publications = [
     title: "Visualizing the Chemical Bond",
     author: "Lerman, Z. M.",
     publisher: "Chemical Education Journal",
-    pages: "5, (1), Special Issue on Pacifichem 2000 (2001)",
+    pages: "2001, 5, (1), Special Issue on Pacifichem 2000",
     url: "",
   },
   {
@@ -340,7 +341,8 @@ const publications = [
     title: "Chemistry for the People who will Shape our Future",
     author: "Lerman, Z.",
     publisher: "Chemical Education Journal",
-    pages: "4, 1, Special Issue on the 8ACC Symposium on Chemical Education",
+    pages:
+      "2000, 4, (1), Special Issue on the 8ACC Symposium on Chemical Education",
     url: "http://chem.sci.utsunomiya-u.ac.jp/v4n1/lerman/header4.html",
   },
 ];
@@ -422,6 +424,9 @@ const Pages = styled.p`
 const Publications = () => {
   return (
     <Container>
+      <Head>
+        <title>Publications</title>
+      </Head>
       <h3>Selected Publications</h3>
       <List>
         {publications.map((publication) =>

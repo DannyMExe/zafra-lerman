@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Head from "next/head";
 
 const Container = styled.div`
   padding-top: 5%;
@@ -154,6 +155,9 @@ const Awards = () => {
 
   return (
     <Container>
+      <Head>
+        <title>Awards</title>
+      </Head>
       <h3>Awards</h3>
       <AwardsContainer>
         {awards.map((award, index) => {

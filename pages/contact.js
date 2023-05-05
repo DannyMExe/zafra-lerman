@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FaTwitter, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
+import Head from "next/head";
 
 const Container = styled.div`
   text-align: center;
@@ -78,6 +79,9 @@ const YoutubeIcon = styled(FaYoutube)`
 function ContactPage() {
   return (
     <Container>
+      <Head>
+        <title>Contact</title>
+      </Head>
       <h1>Contact</h1>
       <p>
         Thank you for visiting my website! If you have any questions or
