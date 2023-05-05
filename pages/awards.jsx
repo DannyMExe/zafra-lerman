@@ -166,9 +166,6 @@ const Awards = () => {
           );
         })}
       </AwardsContainer>
-      {/* <div>
-                <h3>Publications</h3>
-            </div> */}
     </Container>
   );
 };

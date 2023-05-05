@@ -315,42 +315,61 @@ const publications = [
   },
 ];
 
+const Container = styled.div`
+  padding-top: 55px;
+  text-align: center;
+  h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+`;
+
 const List = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-around;
+  /* align-items: center; */
   text-align: center;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 `;
 
 const Item = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  /* max-width: 400px; */
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-inline: 5px;
+  width: 51%;
+  gap: 2px;
+  @media (max-width: 750px) {
+    width: 80%;
+  }
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  /* border: 1px solid rgba(255, 255, 255, 0.8); */
+  .honor,
+  .year {
+    font-weight: bold;
+  }
 `;
 
 const TitleBlue = styled.a`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   text-decoration: underline;
   color: blue;
   display: inline-block;
-  width: max-content;
+  /* padding-inline: 10px; */
 `;
 
-const TitleBlack = styled.h3`
-  font-size: 1.2rem;
+const TitleBlack = styled.p`
+  font-size: 1.1rem;
   font-weight: bold;
-  /* text-decoration: underline; */
-  /* color: blue; */
   display: inline-block;
-  width: max-content;
+  /* padding-inline: 10px; */
 `;
 
 const Description = styled.p`
@@ -367,35 +386,38 @@ const Author = styled.p`
 
 const Publications = () => {
   return (
-    <List>
-      {publications.map((publication) =>
-        publication.url ? (
-          <Item key={publication.id}>
-            <TitleBlue
-              href={publication.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {publication.title}
-            </TitleBlue>
-            <Author>{publication.author}</Author>
-            <Description>{publication.publisher}</Description>
-          </Item>
-        ) : (
-          <Item key={publication.id}>
-            <TitleBlack
-              href={publication.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {publication.title}
-            </TitleBlack>
-            <Author>{publication.author}</Author>
-            <Description>{publication.publisher}</Description>
-          </Item>
-        )
-      )}
-    </List>
+    <Container>
+      <h3>Publications</h3>
+      <List>
+        {publications.map((publication) =>
+          publication.url ? (
+            <Item key={publication.id}>
+              <TitleBlue
+                href={publication.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {publication.title}
+              </TitleBlue>
+              <Author>{publication.author}</Author>
+              <Description>{publication.publisher}</Description>
+            </Item>
+          ) : (
+            <Item key={publication.id}>
+              <TitleBlack
+                href={publication.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {publication.title}
+              </TitleBlack>
+              <Author>{publication.author}</Author>
+              <Description>{publication.publisher}</Description>
+            </Item>
+          )
+        )}
+      </List>
+    </Container>
   );
 };
 
