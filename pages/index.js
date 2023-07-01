@@ -9,6 +9,7 @@ import RightsImage from "../public/homePage/sakharov.jpg";
 import Collapse from "../src/components/Home/Collapsible";
 import Head from "next/head";
 
+//git test
 const Container = styled.div`
   display: flex;
   flex-direction: column;
