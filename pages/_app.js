@@ -6,6 +6,7 @@ import Header from "../src/components/Header";
 import { useRouter } from "next/router";
 import Footer from "../src/components/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 
 const Container = styled.div`
   margin: 0;
@@ -52,6 +53,7 @@ export default function App({ Component, pageProps }) {
       <Parallax style={{ y }}></Parallax>
       <Header />
       <Component {...pageProps} />
+      <Analytics />
       <Footer
         home={asPath == "/" || asPath == "/awards" ? true : false}
         contact={asPath == "/contact" ? true : false}
