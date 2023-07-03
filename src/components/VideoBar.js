@@ -71,9 +71,15 @@ const Video = styled.div`
       display: none;
     }
   }
+  .home & {
+    width: 50vw;
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+  }
 `;
 
-const VideoBar = ({ videos, bg }) => {
+const VideoBar = ({ videos, bg, home }) => {
   const youtubeIds = [
     "6wLCKkr_yQk",
     "RGuMyXOhcLI",
@@ -96,10 +102,10 @@ const VideoBar = ({ videos, bg }) => {
 
   return (
     <div>
-      <VideoContainer>
+      <VideoContainer className={home ? "home" : ""}>
         {videos.map((video, idx) => {
           return (
-            <Video key={idx}>
+            <Video key={idx} id="vid">
               <Youtube videoId={video.id} opts={options} />
               <h3 className="bg">{video.title}</h3>
               <p className="bg">{video.desc}</p>

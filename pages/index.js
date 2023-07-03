@@ -8,6 +8,7 @@ import DiplomacyImage from "../public/homePage/GroupPhoto.png";
 import RightsImage from "../public/homePage/sakharov.jpg";
 import Collapse from "../src/components/Home/Collapsible";
 import Head from "next/head";
+import VideoBar from "../src/components/VideoBar";
 
 //git test
 const Container = styled.div`
@@ -105,6 +106,10 @@ const Parallax = styled(motion.div)`
   z-index: -1;
 `;
 
+const VideoContainer = styled.div`
+  width: 100%;
+`;
+
 const Home = () => {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "30%"]);
@@ -175,6 +180,18 @@ const Home = () => {
           </h1>
         </HeaderContainer>
       </Bio>
+      <VideoContainer>
+        <VideoBar
+          home={true}
+          videos={[
+            {
+              id: "kpUSlyMt5D8",
+              title: "Meet Me in the Middle - 30 Minute Malta X Documentary",
+              desc: ``,
+            },
+          ]}
+        />
+      </VideoContainer>
       {collapsibleInfo.map((item, index) => {
         return (
           <Collapse
