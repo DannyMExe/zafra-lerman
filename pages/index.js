@@ -107,7 +107,24 @@ const Parallax = styled(motion.div)`
 `;
 
 const VideoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  iframe {
+    padding-bottom: 0;
+  }
+`;
+
+const VideoDesc = styled.p`
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 50vw;
+  text-align: center !important;
+  color: white;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 `;
 
 const Home = () => {
@@ -191,6 +208,16 @@ const Home = () => {
             },
           ]}
         />
+        <VideoDesc>
+          Directed by Yaniv Rokah, this captivating documentary explores the
+          transformative Malta X Conference—an exemplary event showcasing the
+          power of science diplomacy for Middle East peace. Scientists from 15
+          Middle Eastern nations, along with Morocco and Pakistan, collaborate
+          with Nobel Laureates to address pressing environmental challenges.
+          Held in serene Malta from November 6th to 11th, 2021, this landmark
+          event forged meaningful collaborations and advanced sustainable
+          solutions.
+        </VideoDesc>
       </VideoContainer>
       {collapsibleInfo.map((item, index) => {
         return (

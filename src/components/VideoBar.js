@@ -77,6 +77,14 @@ const Video = styled.div`
       width: 100%;
     }
   }
+  .homeTitle {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 50vw;
+    @media (max-width: 750px) {
+      width: 100vw;
+    }
+  }
 `;
 
 const VideoBar = ({ videos, bg, home }) => {
@@ -107,8 +115,8 @@ const VideoBar = ({ videos, bg, home }) => {
           return (
             <Video key={idx} id="vid">
               <Youtube videoId={video.id} opts={options} />
-              <h3 className="bg">{video.title}</h3>
-              <p className="bg">{video.desc}</p>
+              <h3 className={home ? "homeTitle bg" : "bg"}>{video.title}</h3>
+              {video.desc ? <p className="bg">{video.desc}</p> : <></>}
               {/* MAKE DIV DISPLAY NONE IN DESKTOP */}
               {/* <p
                                 className="showmore"
