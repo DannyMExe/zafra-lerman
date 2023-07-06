@@ -197,7 +197,7 @@ const Home = () => {
           </h1>
         </HeaderContainer>
       </Bio>
-      <VideoContainer>
+      {/* <VideoContainer>
         <VideoBar
           home={true}
           videos={[
@@ -218,7 +218,7 @@ const Home = () => {
           event forged meaningful collaborations and advanced sustainable
           solutions.
         </VideoDesc>
-      </VideoContainer>
+      </VideoContainer> */}
       {collapsibleInfo.map((item, index) => {
         return (
           <Collapse
