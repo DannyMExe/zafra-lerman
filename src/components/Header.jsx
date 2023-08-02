@@ -178,7 +178,7 @@ function Header() {
         <div>
           <div id="headerMainCenter">
             <LogoContainer>
-              <Image src={Logo} height={50} />
+              {/* <Image src={Logo} height={50} /> */}
             </LogoContainer>
             <Link href="/" style={{ justifySelf: "center" }}>
               <h1 id="siteTitle">Zafra Lerman</h1>
