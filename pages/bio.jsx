@@ -6,8 +6,11 @@ const BioSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  justify-content: center;
+  align-items: center;
   iframe {
-    width: 100vw !important;
+    // width: 100vw !important;
+    width: 50vw;
     height: 95vh;
   }
   img {
