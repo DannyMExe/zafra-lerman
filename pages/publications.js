@@ -6,7 +6,7 @@ const publications = [
   {
     id: "0",
     title: "The Strength To Resist",
-    author: "Fagan, A",
+    author: "Fagan, A.",
     publisher: "Psychology Today",
     pages: "November 2023",
     url: "https://www.psychologytoday.com/us/articles/202311/the-strength-to-resist",
@@ -23,7 +23,7 @@ const publications = [
   {
     id: "2",
     title: "Keep Up the Fight for Scientists’ Human Rights",
-    author: "Lerman, Z",
+    author: "Lerman, Z.",
     publisher: "Nature Reviews Materials",
     pages: "2022, 7, pp. 497–498",
     url: "https://www.nature.com/articles/s41578-022-00456-7",
@@ -32,7 +32,7 @@ const publications = [
   {
     id: "3",
     title: "Science Education is a Human Right that Belongs to All",
-    author: "Lerman, Z",
+    author: "Lerman, Z.",
     publisher: "Iraqi Academy Journal",
     pages: "2021, 1 (10), pp. 97-102",
     url: "",
@@ -57,7 +57,7 @@ const publications = [
     id: "6",
     title:
       "Education, Human Rights, and Peace – Contributions to the Progress of Humanity",
-    author: "Lerman, Z",
+    author: "Lerman, Z.",
     publisher: "Pure and Applied Chemistry",
     pages: "2018, 91 (2), pp. 351-360",
     url: "https://www.degruyter.com/view/j/pac.2019.91.issue-2/pac-2018-0712/pac-2018-0712.xml",
