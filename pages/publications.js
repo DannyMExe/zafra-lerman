@@ -4,6 +4,14 @@ import Head from "next/head";
 
 const publications = [
   {
+    id: "0",
+    title: "The Strength To Resist",
+    author: "Fagan, A",
+    publisher: "Psychology Today",
+    pages: "November 2023",
+    url: "https://www.psychologytoday.com/us/articles/202311/the-strength-to-resist",
+  },
+  {
     id: "1",
     title:
       "Malta Conferences Foundation, 10th Anniversary Conference: “Knowledge and Society” – MALTA X focus",
