@@ -4,6 +4,93 @@ import Head from "next/head";
 
 const publications = [
   {
+    title: "Human Rights and Peace: A Personal Odyssey",
+    author: "Lerman, Z.",
+    publisher: "Jenny Stanford Publication",
+    pages: "July 2024",
+    url: "https://www.routledge.com/Human-Rights-and-Peace-A-Personal-Odyssey/Lerman/p/book/9789815129243",
+  },
+  {
+    title:
+      "Peace with Penny, Season 5 Trailer: Penny S. Tee Interviews Zafra Lerman of the Malta Conferences Foundation",
+    author: "Peace with Penny",
+    publisher: "",
+    pages: "August 13, 2024",
+    url: "https://youtu.be/qFWVqmT4U-c",
+  },
+  {
+    title:
+      "You May Say She’s a Dreamer: Review of “Human Rights and Peace: A Personal Odyssey,” by Z. Lerman",
+    author: "Pacchioni, G.",
+    publisher: "Nature Reviews Materials",
+    pages: "August 19, 2024",
+    url: "https://rdcu.be/dRA6c",
+  },
+  {
+    title:
+      "Interview with Humanitarian Zafra Lerman on the Power of Scientific Research, Education, and Science Diplomacy",
+    author: "Kilian, N.",
+    publisher: "Science Speaks",
+    pages: "August 2024",
+    url: "https://www.science-speaks.com/zafra-lerman",
+  },
+  {
+    title: "New Book by Zafra Lerman",
+    author: "Chicago Section of the American Chemical Society",
+    publisher: "The Chemical Bulletin",
+    pages: "Vol. 111, No. 7, p. 9, September 2024",
+    url: "https://chicagoacs.org/images/downloads/Chemical_Bulletin/2024_09_chembull.pdf",
+  },
+  {
+    id: "0",
+    title:
+      "How the Malta Conferences Are Cultivating International Peace Through Scientific Exchange.",
+    author: "Kilian, N.",
+    publisher: "Advanced Science News",
+    pages: "January 10, 2023",
+    url: "https://www.psychologytoday.com/us/articles/202311/the-strength-to-resist",
+  },
+  {
+    id: "0",
+    title: "Beyond Borders.",
+    author: "Pewsey, E.",
+    publisher: "Chemistry World",
+    pages: "January 11, 2023",
+    url: "https://www.chemistryworld.com/careers/science-can-be-a-powerful-tool-for-diplomacy/4016706.article",
+  },
+  {
+    id: "0",
+    title: "Penny S. Tee Interviews Zafra Lerman.",
+    author: "PEACE with Penny: Penny S. Tee Interviews",
+    publisher: "",
+    pages: "February 28, 2023",
+    url: "https://www.youtube.com/watch?v=fh62mkmBgds",
+  },
+  {
+    id: "0",
+    title: "Report from Malta X.",
+    author: "Hoffman, M.Z.",
+    publisher: "The Nucleus",
+    pages: "2023",
+    url: "https://www.nesacs.org/wp-content/uploads/2023/03/Mar2023NUCLEUS.pdf",
+  },
+  {
+    id: "0",
+    title: "How Many Roads Must a Woman Walk Down?",
+    author: "Pichon, A.",
+    publisher: "Nature Chemistry",
+    pages: "March 27, 2023, pp.1-3",
+    url: "https://www.nature.com/articles/s41557-023-01161-w.epdf?sharing_token=GgKE3IZHAwjEjBgUhfMsNtRgN0jAjWel9jnR3ZoTv0Mtx0822zKyB7mPxcDZ8y_lampxwyBBaKbDnniROA9gupTypVBJJTOs0-PStBQziMK2PdV1rk8FFFZxi2N420jN3vVgdohYy4kdagpVuo8mM0a_3UpE8jrVeiri30mICkg%3D",
+  },
+  {
+    id: "0",
+    title: "“We only have one nationality, it’s science.”",
+    author: "The Connected Leadership Podcast: Zafra Lerman",
+    publisher: "",
+    pages: "March 2023",
+    url: "",
+  },
+  {
     id: "0",
     title: "The Strength To Resist",
     author: "Fagan, A.",
@@ -437,9 +524,9 @@ const Publications = () => {
       </Head>
       <h3>Selected Publications</h3>
       <List>
-        {publications.map((publication) =>
+        {publications.map((publication, index) =>
           publication.url ? (
-            <Item key={publication.id}>
+            <Item key={index}>
               <TitleBlue
                 href={publication.url}
                 target="_blank"
@@ -452,7 +539,7 @@ const Publications = () => {
               <Pages>{publication.pages}</Pages>
             </Item>
           ) : (
-            <Item key={publication.id}>
+            <Item key={index}>
               <TitleBlack
                 href={publication.url}
                 target="_blank"
