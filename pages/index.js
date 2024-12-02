@@ -210,7 +210,14 @@ const Home = () => {
         </HeaderContainer>
       </Bio>
       <BookBanner>
-        <div style={{ flex: "1", paddingRight: "20px" }}>
+        <div
+          style={{
+            flex: "1",
+            paddingRight: "20px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Image
             src="/book_pic.jpeg"
             alt="Book Cover"
