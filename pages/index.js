@@ -127,6 +127,19 @@ const VideoDesc = styled.p`
   }
 `;
 
+const BookBanner = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 750px) {
+    flex-direction: row;
+  }
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.7);
+  margin-top: -15vh;
+`;
+
 const Home = () => {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "30%"]);
@@ -174,7 +187,6 @@ const Home = () => {
 
   return (
     <Container>
-      {/* <Parallax style={{ y }}></Parallax> */}
       <Head>
         <title>Zafra Lerman</title>
         <meta
@@ -197,28 +209,54 @@ const Home = () => {
           </h1>
         </HeaderContainer>
       </Bio>
-      {/* <VideoContainer>
-        <VideoBar
-          home={true}
-          videos={[
-            {
-              id: "LyCWob9pTHQ",
-              title: "Meet Me in the Middle - 30 Minute Malta X Documentary",
-              desc: ``,
-            },
-          ]}
-        />
-        <VideoDesc>
-          Directed by Yaniv Rokah, this captivating documentary explores the
-          transformative Malta X Conference—an exemplary event showcasing the
-          power of science diplomacy for Middle East peace. Scientists from 15
-          Middle Eastern nations, along with Morocco and Pakistan, collaborate
-          with Nobel Laureates to address pressing environmental challenges.
-          Held in serene Malta from November 6th to 11th, 2021, this landmark
-          event forged meaningful collaborations and advanced sustainable
-          solutions.
-        </VideoDesc>
-      </VideoContainer> */}
+      <BookBanner>
+        <div style={{ flex: "1", paddingRight: "20px" }}>
+          <Image
+            src="/book_pic.jpeg"
+            alt="Book Cover"
+            width={200}
+            height={300}
+          />
+        </div>
+        <div style={{ flex: "2" }}>
+          <h2>Human Rights and Peace: a Personal Odyssey is Out Now!</h2>
+          <p style={{ paddingLeft: "0px" }}>
+            Zafra Lerman's new book, Human Rights and Peace: A Personal Odyssey
+            is available now! This book covers her extensive work in science
+            education, diplomacy, and human rights.
+          </p>
+          <a
+            href="https://www.jennystanford.com/9789815129243/human-rights-and-peace/"
+            style={{
+              color: "blue",
+              display: "inline-block",
+              backgroundColor: "#0070f3",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              textDecoration: "underline",
+              marginRight: "10px",
+            }}
+          >
+            Jenny Standford Publishing
+          </a>
+          <a
+            href="https://www.amazon.com/Human-Rights-Peace-Zafra-Lerman/dp/9815129244"
+            style={{
+              color: "blue",
+              display: "inline-block",
+              backgroundColor: "#0070f3",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              textDecoration: "underline",
+            }}
+          >
+            Amazon
+          </a>
+        </div>
+      </BookBanner>
+
       {collapsibleInfo.map((item, index) => {
         return (
           <Collapse
@@ -230,9 +268,6 @@ const Home = () => {
           />
         );
       })}
-
-      {/* <VideoBar />
-            <MaltaBar /> */}
     </Container>
   );
 };
