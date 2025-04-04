@@ -5,6 +5,14 @@ import Head from "next/head";
 const publications = [
   {
     title:
+      "Zafra Lerman to receive 24th International Advocate for Peace Award",
+    author: "Sara Cottle",
+    publisher: "c&en",
+    pages: "February 2025",
+    url: "https://cen.acs.org/acs-news/Zafra-Lerman-receive-24th-International/103/web/2025/02?ref=search_results",
+  },
+  {
+    title:
       "A Force For Peace And Justice: Dr. Zafra Lerman’s Journey From Science To Global Advocacy",
     author: "TheJ.ca Staff",
     publisher: "TheJ.ca",
