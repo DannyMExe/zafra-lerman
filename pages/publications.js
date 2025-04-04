@@ -4,6 +4,13 @@ import Head from "next/head";
 
 const publications = [
   {
+    title: "Meet Dr. Zafra Lerman: Queen of Science Diplomacy.",
+    author: "Weizmann USA",
+    publisher: "The Curiosity Review",
+    pages: "April 2025",
+    url: "https://www.weizmann-usa.org/blog/meet-dr-zafra-lerman-queen-of-science-diplomacy/",
+  },
+  {
     title: "From The Editor's Desk, Lerman Lecture Draws a Crowd.",
     author: "Schott, Margaret E.",
     publisher: "Chicago Secton of the American Chemical Society Newsleter",
