@@ -4,6 +4,14 @@ import Head from "next/head";
 
 const publications = [
   {
+    title:
+      "A Force For Peace And Justice: Dr. Zafra Lerman’s Journey From Science To Global Advocacy",
+    author: "TheJ.ca Staff",
+    publisher: "TheJ.ca",
+    pages: "February 2025",
+    url: "https://thej.ca/2025/02/20/a-force-for-peace-and-justice-dr-zafra-lermans-journey-from-science-to-global-advocacy",
+  },
+  {
     title: "Human Rights and Peace: A Personal Odyssey",
     author: "Lerman, Z.",
     publisher: "Jenny Stanford Publication",
