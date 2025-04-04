@@ -4,9 +4,16 @@ import Head from "next/head";
 
 const publications = [
   {
+    title: "From The Editor's Desk, Lerman Lecture Draws a Crowd.",
+    author: "Schott, Margaret E.",
+    publisher: "Chicago Secton of the American Chemical Society Newsleter",
+    pages: "February 2025, Vol. 112 No. 3, p. 4-5",
+    url: "",
+  },
+  {
     title:
       "Zafra Lerman to receive 24th International Advocate for Peace Award",
-    author: "Sara Cottle",
+    author: "Cottle, Sara",
     publisher: "c&en",
     pages: "February 2025",
     url: "https://cen.acs.org/acs-news/Zafra-Lerman-receive-24th-International/103/web/2025/02?ref=search_results",
