@@ -5,75 +5,75 @@ import Link from "next/link";
 import Head from "next/head";
 
 const Container = styled.div`
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
   text-align: center;
-  margin-top: 50px;
+
+  @media (max-width: 750px) {
+    padding: 24px 16px 40px;
+  }
+`;
+
+const PageHeader = styled.div`
+  margin-bottom: 32px;
+
   h1 {
-    margin-block: 2%;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px;
   }
   p {
-    font-size: 22px;
-    font-weight: 600;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 4%;
-    @media (max-width: 850px) {
-      width: 85%;
-    }
+    font-size: 16px;
+    color: #5a6a7a;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
   }
 `;
 
-const ContactContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 5%;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 6%;
+const ContactGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-const ContactItem = styled.div`
+const ContactCard = styled.div`
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-  max-width: 200px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-`;
+  gap: 10px;
+  transition: border-color 0.15s, box-shadow 0.15s;
 
-const ContactIcon = styled.div`
-  font-size: 30px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
+  &:hover {
+    border-color: #c5d5e8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .icon {
+    font-size: 28px;
+    display: flex;
+  }
+  .label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
 `;
 
 const ContactLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
   text-decoration: none;
-`;
-
-const EmailIcon = styled(MdEmail)`
-  color: #b33;
-`;
-
-const TwitterIcon = styled(FaTwitter)`
-  color: #1da1f2;
-`;
-
-const LinkedInIcon = styled(FaLinkedinIn)`
-  color: #0077b5;
-`;
-
-const YoutubeIcon = styled(FaYoutube)`
-  color: #ff0000;
+  color: inherit;
 `;
 
 function ContactPage() {
@@ -82,59 +82,64 @@ function ContactPage() {
       <Head>
         <title>Contact</title>
       </Head>
-      <h1>Contact</h1>
-      <p>
-        Thank you for visiting my website! If you have any questions or
-        comments, I'd love to hear from you. Please feel free to reach out via
-        email or any of my social media platforms. I look forward to connecting
-        with you!
-      </p>
-      <ContactContainer>
+
+      <PageHeader>
+        <h1>Contact</h1>
+        <p>
+          Thank you for visiting! If you have any questions or comments, please
+          feel free to reach out via email or any of the platforms below.
+        </p>
+      </PageHeader>
+
+      <ContactGrid>
         <ContactLink href="mailto:zafra@zafralerman.com">
-          <ContactItem>
-            <ContactIcon>
-              <EmailIcon />
-            </ContactIcon>
-            zafra@zafralerman.com
-          </ContactItem>
+          <ContactCard>
+            <span className="icon" style={{ color: "#b33" }}>
+              <MdEmail />
+            </span>
+            <span className="label">zafra@zafralerman.com</span>
+          </ContactCard>
         </ContactLink>
+
         <ContactLink
           href="https://twitter.com/ZafraLerman"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <ContactItem>
-            <ContactIcon>
-              <TwitterIcon />
-            </ContactIcon>
-            @ZafraLerman
-          </ContactItem>
+          <ContactCard>
+            <span className="icon" style={{ color: "#1da1f2" }}>
+              <FaTwitter />
+            </span>
+            <span className="label">@ZafraLerman</span>
+          </ContactCard>
         </ContactLink>
+
         <ContactLink
           href="https://www.linkedin.com/in/zafralerman/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <ContactItem>
-            <ContactIcon>
-              <LinkedInIcon />
-            </ContactIcon>
-            Zafra Lerman
-          </ContactItem>
+          <ContactCard>
+            <span className="icon" style={{ color: "#0077b5" }}>
+              <FaLinkedinIn />
+            </span>
+            <span className="label">Zafra Lerman</span>
+          </ContactCard>
         </ContactLink>
+
         <ContactLink
           href="https://www.youtube.com/@lermaninstitute"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <ContactItem>
-            <ContactIcon>
-              <YoutubeIcon />
-            </ContactIcon>
-            Lerman Institute
-          </ContactItem>
+          <ContactCard>
+            <span className="icon" style={{ color: "#ff0000" }}>
+              <FaYoutube />
+            </span>
+            <span className="label">Lerman Institute</span>
+          </ContactCard>
         </ContactLink>
-      </ContactContainer>
+      </ContactGrid>
     </Container>
   );
 }

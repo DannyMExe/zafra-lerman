@@ -2,107 +2,91 @@ import Link from "next/link";
 import React from "react";
 import {
   FaTwitter,
-  FaFacebookF,
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import styled from "styled-components";
 
-const Container = styled.div`
-  /* background-color: #f2f2f2; */
-  padding: 20px;
+const Container = styled.footer`
+  padding: 32px 24px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 5vw;
+  @media (max-width: 750px) {
+    padding: 24px 16px;
   }
+`;
 
-  .social-icons a {
+const SocialRow = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+
+  a {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    color: #333;
-    color: inherit;
-    font-size: 1.5em;
-    margin: 0 10px;
-    transition: color 0.2s ease-in-out;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    color: #5a6a7a;
+    font-size: 18px;
     text-decoration: none;
-    @media (max-width: 750px) {
-      font-size: 1em;
-    }
-  }
+    transition: color 0.15s, background-color 0.15s;
+    background: rgba(255, 255, 255, 0.6);
 
-  .social-icons a:hover {
-    color: #1da1f2; /* Twitter blue */
-  }
-
-  .social-icons a:hover:nth-of-type(2) {
-    color: #1877f2; /* Facebook blue */
-  }
-
-  .social-icons a:hover:nth-of-type(3) {
-    color: #ff0000; /* YouTube red */
-  }
-
-  .social-icons a:hover:nth-of-type(4) {
-    color: #0e76a8; /* LinkedIn blue */
-  }
-
-  .social-icons a span {
-    margin-top: 5px;
-    font-size: 0.8em;
-  }
-  .copyright {
-    text-align: center;
-    font-size: 1em;
-    margin-top: 15px;
-    @media (max-width: 750px) {
-      font-size: 0.8em;
+    &:hover {
+      color: #4a90d9;
+      background: rgba(74, 144, 217, 0.08);
     }
   }
 `;
 
-function Footer({ home, contact }) {
+const Copyright = styled.div`
+  text-align: center;
+  font-size: 13px;
+  color: #8896a6;
+  line-height: 1.6;
+`;
+
+function Footer() {
   return (
-    <Container
-      className={`${home ? "footerBg" : ""} ${contact ? "footerContact" : ""}`}
-    >
-      <div className="social-icons">
+    <Container>
+      <SocialRow>
         <Link
           href="https://twitter.com/ZafraLerman"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Twitter"
         >
-          <span>Twitter</span>
           <FaTwitter />
         </Link>
-        <Link href="mailto:zafra@zafralerman.com">
-          <span>Email</span>
+        <Link href="mailto:zafra@zafralerman.com" aria-label="Email">
           <MdEmail />
         </Link>
         <Link
           href="https://www.youtube.com/@lermaninstitute"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="YouTube"
         >
-          <span>YouTube</span>
           <FaYoutube />
         </Link>
         <Link
           href="https://www.linkedin.com/in/zafralerman/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
-          <span>LinkedIn</span>
           <FaLinkedinIn />
         </Link>
-      </div>
-      <div className="copyright">
-        <p>Copyright &copy; 2023 Zafra Lerman</p>
+      </SocialRow>
+      <Copyright>
+        <p>&copy; {new Date().getFullYear()} Zafra Lerman</p>
         <p>info@zafralerman.com</p>
-      </div>
+      </Copyright>
     </Container>
   );
 }

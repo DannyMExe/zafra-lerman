@@ -1,104 +1,112 @@
 import React from "react";
-import PhotoGallery from "../src/components/PhotoGallery";
 import styled from "styled-components";
 import VideoBar from "../src/components/VideoBar";
 import Image from "next/image";
 import Head from "next/head";
-
-import MaltaPrinceHassan from "../public/pictures/MaltaPrinceHassanIrinaBokova.jpg";
-import MaltaRoald from "../public/pictures/MaltaRoald.jpg";
-import MaltaWorkshop from "../public/pictures/MaltaWorkshop.jpg";
-
-import Dancers from "../public/homePage/Dancers.jpg";
 import DancersClass from "../public/pictures/FigDancers.jpg";
 
 const Container = styled.div`
-  padding-top: 45px;
-  padding: 0 10px;
-  /* position: relative; */
-  @media (min-width: 750px) {
-    padding: 0 35px;
-  }
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    padding: 15px 0;
-  }
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
 
-  p {
-    font-size: clamp(16px, 2vw, 35px);
-    padding-bottom: 25px;
-  }
-
-  img {
-    width: 40vw;
-    height: auto;
-    align-self: center;
-    @media (max-width: 750px) {
-      width: 100%;
-    }
+  @media (max-width: 750px) {
+    padding: 24px 16px 40px;
   }
 `;
 
-const SectionContainer = styled.div`
-  display: flex;
-  padding-bottom: 10px;
-  p {
-    font-size: clamp(16px, 2vw, 35px);
-    flex: 0.6;
+const PageHeader = styled.div`
+  text-align: center;
+  margin-bottom: 40px;
 
-    @media (min-width: 750px) {
-      padding-left: 20px;
-    }
+  h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 12px;
   }
+  p {
+    font-size: 16px;
+    color: #5a6a7a;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+`;
+
+const ContentSection = styled.section`
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 48px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 
   img {
     width: 100%;
     height: auto;
-    align-self: flex-start;
-    flex: 0.4;
+    border-radius: 10px;
   }
 
   @media (max-width: 750px) {
     flex-direction: column;
+    padding: 20px;
+    gap: 20px;
   }
 `;
 
-// const Background = styled.div`
-//     position: absolute;
-//     background-image: url("/homePage/bgBlue.jpeg");
-//     background-size: cover;
-//     background-position: center;
-//     top: 0;
-//     bottom: 0;
-//     height: 400vh;
-//     width: 100vw;
-//     max-width: 100%;
-//     z-index: -1;
-// `;
+const ContentImage = styled.div`
+  flex: 0 0 40%;
+  @media (max-width: 750px) {
+    flex: none;
+    width: 100%;
+  }
+`;
+
+const ContentText = styled.div`
+  flex: 1;
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a5568;
+    margin: 0;
+  }
+`;
+
+const VideoSection = styled.div`
+  margin-top: 48px;
+
+  h2 {
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0 0 8px;
+  }
+`;
+
+const VideoSubtitle = styled.p`
+  text-align: center;
+  color: #5a6a7a;
+  font-size: 15px;
+  margin: 0 0 28px;
+`;
 
 const Education = () => {
-  const images = [
-    // { src: MaltaGroup, alt: "" },
-    { src: MaltaPrinceHassan, alt: "" },
-    { src: MaltaRoald, alt: "" },
-    { src: MaltaWorkshop, alt: "" },
-    // { src: MaltaGroup, alt: "" },
-    { src: MaltaPrinceHassan, alt: "" },
-    { src: MaltaRoald, alt: "" },
-    { src: MaltaWorkshop, alt: "" },
-  ];
-
   const videos = [
     {
-      id: "tNwHYh5YbZo",
-      title: "Period Table: The Elements Dance",
-      desc: ``,
+      id: "oThebAJpjbY",
+      title: "Classroom of the Future 2.0",
+      desc: "Student Project by Radek Michalik, Abdias Perez, & Mark Theriault",
     },
+    { id: "tNwHYh5YbZo", title: "Periodic Table: The Elements Dance", desc: "" },
     {
       id: "6wLCKkr_yQk",
       title: "The Bondfather",
-      desc: `1997 Student Project by Rebekah Lewis & Eddie Sircher`,
+      desc: "1997 Student Project by Rebekah Lewis & Eddie Sircher",
     },
     {
       id: "boMp0vz_uRk",
@@ -117,17 +125,17 @@ const Education = () => {
     },
     {
       id: "JQIvWPYkDZM",
-      title: "Stratosphere Wars : Chlorine Strikes Back",
+      title: "Stratosphere Wars: Chlorine Strikes Back",
       desc: "1999 Student Project by Marcus Jones",
     },
     {
       id: "TdaC5blXZtI",
       title: "Ionic Bondage",
-      desc: "1999 Student Project by Joe Nelson.",
+      desc: "1999 Student Project by Joe Nelson",
     },
     {
       id: "4SiPnGJcI4A",
-      title: "Love Story : Sodium & Chlorine",
+      title: "Love Story: Sodium & Chlorine",
       desc: "1982 Student Project",
     },
     {
@@ -156,50 +164,46 @@ const Education = () => {
     <Container>
       <Head>
         <title>Education</title>
-        <meta
-          name="keywords"
-          content="Education, Teaching, Science, Chemistry"
-        ></meta>
-        <meta
-          name="description"
-          content="Teaching Science Through the Arts"
-        ></meta>
+        <meta name="keywords" content="Education, Teaching, Science, Chemistry" />
+        <meta name="description" content="Teaching Science Through the Arts" />
       </Head>
-      {/* <Background></Background> */}
-      <h1>Education</h1>
-      <SectionContainer>
-        <Image src={DancersClass} unoptimized={true} />
-        <p>
-          Zafra developed an innovative approach of teaching science at all
-          levels using art, music, dance, drama, animation, and rap. These
-          methods proved to be extremely successful with underprivileged
-          students around the world and received international recognition. In
-          2000, she adopted the school district of the town of Soweto, South
-          Africa (the birthplace of Mandela and Bishop Tutu). In Chicago&#39;s
-          low-income neighborhoods, she worked with students, teachers and
-          parents and had a tremendous impact on their attitudes towards
-          science. Zafra worked with homeless students at night in a dance
-          studio and taught them science through dance. Many of these students
-          graduated from college and two continued for a PhD in biochemistry.
-          She worked with prisoners who succeeded in receiving bachelor&#39;s
-          and master&#39;s degrees. Over 16,000 Chicago public school students
-          and more than 1,000 teachers participated in her programs.
-        </p>
-      </SectionContainer>
-      <SectionContainer>
-        {/* <Image src={DancersClass} unoptimized={true} /> */}
-      </SectionContainer>
-      {/* <PhotoGallery images={images} /> */}
-      <VideoBar
-        videos={[
-          {
-            id: "oThebAJpjbY",
-            title: "Classroom of the Future 2.0",
-            desc: `Student Project by Radek Michalik, Abdias Perez, & Mark Theriault`,
-          },
-        ]}
-      />
-      <VideoBar videos={videos} />
+
+      <PageHeader>
+        <h1>Education</h1>
+        <p>Teaching science through art, music, dance, drama, and animation.</p>
+      </PageHeader>
+
+      <ContentSection>
+        <ContentImage>
+          <Image src={DancersClass} alt="Students learning science through dance" unoptimized />
+        </ContentImage>
+        <ContentText>
+          <p>
+            Zafra developed an innovative approach of teaching science at all
+            levels using art, music, dance, drama, animation, and rap. These
+            methods proved to be extremely successful with underprivileged
+            students around the world and received international recognition. In
+            2000, she adopted the school district of the town of Soweto, South
+            Africa (the birthplace of Mandela and Bishop Tutu). In Chicago&#39;s
+            low-income neighborhoods, she worked with students, teachers and
+            parents and had a tremendous impact on their attitudes towards
+            science. Zafra worked with homeless students at night in a dance
+            studio and taught them science through dance. Many of these students
+            graduated from college and two continued for a PhD in biochemistry.
+            She worked with prisoners who succeeded in receiving bachelor&#39;s
+            and master&#39;s degrees. Over 16,000 Chicago public school students
+            and more than 1,000 teachers participated in her programs.
+          </p>
+        </ContentText>
+      </ContentSection>
+
+      <VideoSection>
+        <h2>Student Projects</h2>
+        <VideoSubtitle>
+          Films and animations created by students in Zafra&apos;s programs.
+        </VideoSubtitle>
+        <VideoBar videos={videos} />
+      </VideoSection>
     </Container>
   );
 };

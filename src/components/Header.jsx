@@ -1,212 +1,112 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Link from "next/link";
-import Router from "next/router";
 import styled from "styled-components";
 import { links } from "./Nav/links";
 import NavBar from "./Nav/NavBar";
-import Logo from "../../public/LIASLogoNoText.png";
-import Image from "next/image";
 
-const headerMainHeight = "10em";
-const headerTopHeight = "2em";
-
-const HeaderContainer = styled.div`
-  color: white;
-  /* height: 10em; */
-  h1,
-  p {
-    :hover {
-      color: lightgray;
-    }
-  }
-`;
-
-const mobileLogoTextWidth = "3.62em";
-
-const HeaderMain = styled.div`
+const HeaderContainer = styled.header`
   width: 100%;
-  padding-top: 25px;
-  background-color: rgba(255, 255, 255, 0);
+  padding: 24px 0 0;
+
   @media (min-width: 750px) {
-    padding-top: 50px;
-  }
-
-  > div {
-    height: 100%;
-    a {
-      /* text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center; */
-    }
-    h1 {
-      margin-top: 0.13em;
-      color: black;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .headerIconButton {
-    background-color: #7b0000;
-    width: calc(${headerMainHeight} - 0.5em);
-    height: ${headerMainHeight};
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .headerIconButton:active {
-    background-color: #660000;
-  }
-  /* #headerLogo {
-    width: calc(${headerMainHeight} + ${mobileLogoTextWidth});
-    padding-left: 0.25em;
-
-    h1 {
-      font-size: 1em;
-      width: ${mobileLogoTextWidth};
-      margin: 0 0.4em 0 0.5em;
-    }
-  } */
-  .productType {
-    font-size: 1.4em;
-    padding: 0 0.2em;
-    /* margin: 0 0.8em; */
-  }
-
-  #headerMainCenter {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-bottom: 15px;
-    gap: 2rem;
-
-    #siteTitle {
-      width: fit-content;
-      /* margin: 0.05em auto 0.15em; */
-      font-size: 2.1em;
-      flex: 2 2 200%;
-      @media (min-width: 750px) {
-        font-size: 2.8em;
-      }
-      /* border-bottom: 1px solid white; */
-    }
-  }
-
-  @media screen and (min-width: 800px) {
-    // should expand logo to be wider, maybe at smaller width?
+    padding: 32px 0 0;
   }
 `;
 
-const LinksContainer = styled.div`
-  @media (max-width: 750px) {
-    /* display:none; */
-    display: none;
-  }
-
+const HeaderInner = styled.div`
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
-  width: 80%;
-  /* max-width: 900px; */
-  justify-content: space-between;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 
-  a {
-    color: black;
-    text-decoration: none;
-    font-size: clamp(18px, 20px, 22px);
-    text-align: center;
-    font-weight: bold;
-    /* flex-grow: 1; */
-    flex-basis: 0;
-    /* min-width: 120px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media (width <= 1000px) {
-      font-size: 16px;
-    }
-    @media (width >= 1300px) {
-      font-size: 22px;
-    }
+  @media (max-width: 750px) {
+    padding: 0 16px;
   }
-  /* a:not(:last-child)::after {
-    content: "|";
-    margin: 0 10px;
-  } */
 `;
 
-const BurgerMenu = styled.div`
+const TitleRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+`;
+
+const SiteTitle = styled(Link)`
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+
+  &:hover {
+    color: #4a90d9;
+  }
+`;
+
+const BurgerWrap = styled.div`
   @media (min-width: 751px) {
     display: none;
   }
   position: absolute;
-  top: 36px;
-  right: 36px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 `;
 
-const LogoContainer = styled.div`
-  /* position: absolute; */
-  top: 16px;
-  left: 25px;
+const Nav = styled.nav`
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  justify-self: left;
-  img {
-    @media (min-width: 750px) {
-      height: 100px;
-      width: auto;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+
+  a {
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.15s, background-color 0.15s;
+
+    &:hover {
+      color: #4a90d9;
+      background-color: rgba(74, 144, 217, 0.08);
     }
   }
 `;
 
-//COMPONENT STARTS HERE
 function Header() {
-  // if we want to hide search when user switch pages, maybe should add 'isSearching' to redux store
-  // also need to allow user to exit out by clicking elsewhere
   return (
     <HeaderContainer>
-      <HeaderMain>
-        <div>
-          <div id="headerMainCenter">
-            <LogoContainer>
-              {/* <Image src={Logo} height={50} /> */}
-            </LogoContainer>
-            <Link href="/" style={{ justifySelf: "center" }}>
-              <h1 id="siteTitle">Zafra Lerman</h1>
+      <HeaderInner>
+        <TitleRow>
+          <SiteTitle href="/">Zafra Lerman</SiteTitle>
+          <BurgerWrap>
+            <NavBar />
+          </BurgerWrap>
+        </TitleRow>
+        <Nav>
+          {links.map((link, idx) => (
+            <Link
+              key={idx}
+              href={link.path}
+              target={link.id === "malta" ? "_blank" : undefined}
+            >
+              {link.title}
             </Link>
-            <div style={{ width: "38px" }}></div>
-            <BurgerMenu>
-              <NavBar />
-            </BurgerMenu>
-          </div>
-          <LinksContainer>
-            {links.map((link, idx) => {
-              return (
-                <Link
-                  id={link.id}
-                  key={idx}
-                  href={link.path}
-                  target={link.id == "malta" ? "_blank" : ""}
-                >
-                  {link.title}
-                </Link>
-              );
-            })}
-          </LinksContainer>
-        </div>
-      </HeaderMain>
+          ))}
+        </Nav>
+      </HeaderInner>
     </HeaderContainer>
   );
 }
 
-// disabling SSR for the header, because its contents depend on the localStorage
 export default Header;
